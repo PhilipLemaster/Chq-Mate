@@ -1,10 +1,12 @@
 import React from 'react';
 
 function App() {
+
+  let usrName = 'Philip';
+
   return (
     <div>
-      <h1>Welcome to the Site</h1>
-      <img src='./assets/images/Logo.png'></img>
+      <h1>Welcome to the Site, {usrName}</h1>
     </div>
   );
 }

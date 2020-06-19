@@ -2,10 +2,11 @@
     "name": "chq-mate",
     "version": "1.0.0",
     "description": "Social media app designed to connect gamers with prospective party members and quest partners.",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js"
+      "start": "node server.js",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     },
     "repository": {
       "type": "git",

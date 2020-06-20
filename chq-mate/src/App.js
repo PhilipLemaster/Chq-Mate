@@ -1,12 +1,11 @@
 import React from 'react';
+import NavbarMain from './components/Navbar/index';
 
 function App() {
-
-  let usrName = 'Philip';
-
+  
   return (
     <div>
-      <h1>Welcome to the Site, {usrName}</h1>
+      <NavbarMain />
     </div>
   );
 }

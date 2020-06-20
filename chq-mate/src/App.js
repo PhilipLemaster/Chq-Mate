@@ -1,10 +1,11 @@
 import React from 'react';
+import NavbarMain from './components/Navbar/index';
 
 function App() {
+  
   return (
     <div>
-      <h1>Welcome to the Site</h1>
-      <img src='./assets/images/Logo.png'></img>
+      <NavbarMain />
     </div>
   );
 }

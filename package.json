@@ -1,21 +1,25 @@
 {
-    "name": "chq-mate",
-    "version": "1.0.0",
-    "description": "Social media app designed to connect gamers with prospective party members and quest partners.",
-    "main": "server.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js",
-      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/PhilipLemaster/Chq-Mate.git"
-    },
-    "author": "Philip Lemaster, Charles Price, Mark Fomin, Jonathan Modlin, Andrew Gonzalez",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/PhilipLemaster/Chq-Mate/issues"
-    },
-    "homepage": "https://github.com/PhilipLemaster/Chq-Mate#readme"
+  "name": "chq-mate",
+  "version": "1.0.0",
+  "description": "Social media app designed to connect gamers with prospective party members and quest partners.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilipLemaster/Chq-Mate.git"
+  },
+  "author": "Philip Lemaster, Charles Price, Mark Fomin, Jonathan Modlin, Andrew Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhilipLemaster/Chq-Mate/issues"
+  },
+  "homepage": "https://github.com/PhilipLemaster/Chq-Mate#readme",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "passport-local": "^1.0.0"
   }
+}

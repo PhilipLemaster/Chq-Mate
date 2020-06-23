@@ -11,7 +11,7 @@ import {
 
 import './style.css';
 
-const NavbarMain = (props) => {
+const PostLogNav = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -33,4 +33,4 @@ const NavbarMain = (props) => {
   );
 }
 
-export default NavbarMain;
+export default PostLogNav;

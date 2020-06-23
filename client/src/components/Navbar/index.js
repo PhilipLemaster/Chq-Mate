@@ -18,13 +18,13 @@ const NavbarMain = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">CHQ MATE</NavbarBrand>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/main">CHQ MATE</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/" className="red">Edit Profile</NavLink>
+              <NavLink href="/edit-profile" >Edit Profile</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

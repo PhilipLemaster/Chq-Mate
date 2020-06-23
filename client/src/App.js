@@ -7,8 +7,9 @@ function App() {
 
   return (
     <div>
+      {/* <NavbarMain /> */}
       {/* <EditProfileForm /> */}
-      <JumboSplash />
+      {/* <JumboSplash /> */}
     </div>
   );
 }

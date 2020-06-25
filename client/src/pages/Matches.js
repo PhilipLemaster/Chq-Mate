@@ -7,4 +7,4 @@ function Matches(props) {
     )
 }
 
-export default EditProf;
+export default Matches;

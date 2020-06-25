@@ -1,27 +1,30 @@
 {
-    "name": "chq-mate",
-    "version": "1.0.0",
-    "description": "Social media app designed to connect gamers with prospective party members and quest partners.",
-    "main": "server.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-      "start:prod": "node server.js",
-      "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-      "client": "cd client && npm run start",
-      "seed": "node scripts/seedDB.js",
-      "install": "cd client && npm install",
-      "build": "cd client && npm run build",
-      "heroku-postbuild": "npm run build"
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/PhilipLemaster/Chq-Mate.git"
-    },
-    "author": "Philip Lemaster, Charles Price, Mark Fomin, Jonathan Modlin, Andrew Gonzalez",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/PhilipLemaster/Chq-Mate/issues"
-    },
-    "homepage": "https://github.com/PhilipLemaster/Chq-Mate#readme"
+  "name": "chq-mate",
+  "version": "1.0.0",
+  "description": "Social media app designed to connect gamers with prospective party members and quest partners.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilipLemaster/Chq-Mate.git"
+  },
+  "author": "Philip Lemaster, Charles Price, Mark Fomin, Jonathan Modlin, Andrew Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhilipLemaster/Chq-Mate/issues"
+  },
+  "homepage": "https://github.com/PhilipLemaster/Chq-Mate#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2"
   }
+}

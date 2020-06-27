@@ -18,24 +18,24 @@ import {
 import "./style.css";
 
 const PreLogNav = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  // const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="dark" dark expand="md">
+      <Navbar color="dark" dark expand="md" className="navWhole">
         <NavbarBrand href="/">CHQ MATE</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <FormGroup>
-            <Label for="email">Password</Label>
+        {/* <NavbarToggler onClick={toggle} /> */}
+        <FormGroup className="emailInput">
+            <Label for="email">Email</Label>
             <Input type="email" name="email" id="email" placeholder="User@gmail.com" />
         </FormGroup>
-        <FormGroup>
+        <FormGroup className="passwordInput">
             <Label for="password">Password</Label>
             <Input type="password" name="password" id="password" placeholder="*******" />
         </FormGroup>
-        <Button className='purpleBut'>Submit</Button>
+        <Button className='loginBut'>Login</Button>
       </Navbar>
     </div>
   );

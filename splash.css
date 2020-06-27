@@ -9,14 +9,17 @@ html, body, .page {
     -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);  
     color: #fff;
     overflow: hidden; 
+    background: rgb(28, 27, 34);
   }
 
-img {
+
+
+/* img {
     width: 69px;
     
-}
+} */
 
-#aboutMe{
+ #aboutMe{
     width: 100%; height: auto; 
     background-image: url("about-bg.png");
     background-attachment: fixed;
@@ -27,20 +30,55 @@ img {
     text-align: center;
 } 
 
-.Quote{
+/* .Quote{
     width: 100%; height: auto; padding: 15px; margin-top: 10px; text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 20px; font-size: 14px;
-    background: rgba(255,255,255, 0.2); 
-       
+
+}  */
+
+#gif-box {
+  background: url('https://steamuserimages-a.akamaihd.net/ugc/924805627747624904/2DBF60E8C96C13F0E52A8916469428CA3896847B/')no-repeat;
+	/* background: url('https://i.gifer.com/GuBX.gif')no-repeat; */
+	width: 475px;
+	height: 360px;
+	padding: 125px 0;
+	/* margin-top: 80px;
+	margin-left: 700px; */
+  background-position: center;
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -55%;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    border: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+	
+	box-shadow: 0 10px 20px lightgreen;
 }
 
-#navbar{
-    position: relative;
-    
+#text {
+  margin-left: -1500px;
+	margin-top: -180px;
+	color: rgb(255, 255, 255);
+  text-shadow: -1px 1px 0 rgb(115, 177, 110);
+  font-family: 'Chakra Petch', sans-serif; 
+}
+
+#text2 {
+  margin-left: -1500px;
+  margin-top: 130px;
+	color: rgb(255, 255, 255);
+  text-shadow: -1px 1px 0 rgb(115, 177, 110);
+  font-family: 'Chakra Petch', sans-serif; 
 }
 
 #logo{
     position: relative;
+    background-position: center;
     
 }
   
@@ -94,12 +132,6 @@ img {
   
   
   
-  #t2:target #p1 .icon, 
-  #t3:target #p1 .icon,
-  #t4:target #p1 .icon,
-  #t5:target #p1 .icon {
-    -webkit-filter: blur(3px);
-  }
   
   .icon {
     color: #fff;
@@ -165,7 +197,7 @@ img {
     border-bottom-right-radius: 37px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-image: linear-gradient(90deg,#ff8a00,#e52e71);
+    background-image: linear-gradient(90deg,#c4c2e9,#47a363);
     padding: 1 22px 0 18px;
     height: 60px;
     

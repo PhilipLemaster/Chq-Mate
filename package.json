@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start": "npm run client",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
@@ -25,6 +23,9 @@
   },
   "homepage": "https://github.com/PhilipLemaster/Chq-Mate#readme",
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "bootstrap": "^4.5.0",
+    "prop-types": "^15.7.2",
+    "react-scripts": "^3.4.1",
+    "reactstrap": "^8.5.1"
   }
 }

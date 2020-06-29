@@ -10,6 +10,9 @@ import {
 } from 'reactstrap';
 
 import './style.css';
+import LoginButton from '../LoginButton'
+import LogoutButton from '../LogoutButton';
+import Profile from '../Profile';
 
 const PostLogNav = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +27,20 @@ const PostLogNav = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
+              <LoginButton />
+            </NavItem>
+            <NavItem>
+              <LogoutButton />
+            </NavItem>
+            <NavItem>
               <NavLink href="/edit-profile" >Edit Profile</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
+      <div>
+        <Profile />
+      </div>
     </div>
   );
 }

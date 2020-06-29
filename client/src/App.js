@@ -1,12 +1,13 @@
 import React from 'react';
-import './app.css'
-import PreLogNav from './components/PreLogNav';
+// import {
+//   BrowserRouter as Router
+// } from 'react-router-dom';
+// import NaviBar from './components/NaviBar';
 
 function App() {
 
   return (
     <div>
-      <PreLogNav />
     </div>
   );
 }

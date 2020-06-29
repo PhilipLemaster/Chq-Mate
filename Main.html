@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./chqmate.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="chq.png">
     <link rel="stylesheet" type="text/css" href="splash.css">
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="App to help solo questers find party mates"
+    />
+    <link rel="apple-touch-icon" href="../src/assets/images/Text Logo.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&family=Odibee+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
@@ -13,6 +21,8 @@
     <title>ChqMate</title>
 </head>
 <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
 
     <div class="ct" id="t1">
         <div class="ct" id="t2">
@@ -27,14 +37,20 @@
                   <a href="#t4"><li class="icon fas fa-search" id="4"></li></a>
                   <a href="#t5"><li class="icon fas fa-list-ol" id="5"></li></a>
                 </ul>
-                
-                <section  id="gif-box">
-                  <div id="text"> <h3>Connecting You With Other Gamers</h3></div></section>
+                <div class="page" id="p1">
+                   <section class="icon fa fa-bolt"><span class="title">Welcome</span><span class="hint">To <br>CheqMate</span></section>
+                    <div id="aboutMe">
+                    <h1> <i class="fa fa-quote-left"></i> about ChqMate <i class="fa fa-quote-right"></i> </h1> 
+                    <div class="Quote">
+                        Hello! My name is Andrew Gonzalez. I'm currently a student at UNCC's Coding Bootcamp. 
+                    </div> 
+                  </div>                
+                  <section  id="gif-box">
+                    <div id="text"> <h3>Connecting You With Other Gamers</h3></div></section>
 
-                <section id="bottom">
-                <div id="text2"><h4><i> Don't have any Friends?</h4><br><h5> Here at ChqMate we can connect you to like-minded gamers such as yourself.<br></div>
-                </section>
-                
+                  <section id="bottom">
+                  <div id="text2"><h4><i> Don't have any Friends?</h4><br><h5> Here at ChqMate we can connect you to like-minded gamers such as yourself.<br></div>
+                  </section>
                 <div class="page" id="p2">
                   <section id=logo ><span class="title center">Test</span></section>
                   <!-- <div id=logo  class="brand-logo center "><img src="Logo.png" class="animated rollIn delay-1s">
@@ -50,7 +66,6 @@
                       <a href="" target="_blank">I'm ready to mate. <span> </span> Find the one</a> 
                       <!-- class="hint line-trough" -->
                     </p>
-                    
                   </section>
                 </div> 
                 <div class="page" id="p5">
@@ -58,8 +73,6 @@
                     <span class="title">Mate List</span>
                     <p class="hint">
                       <span> (placeholder) </span><br/>
-                     
-                      
                     </p>
                   </section>
                 </div> 

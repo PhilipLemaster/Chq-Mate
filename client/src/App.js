@@ -1,13 +1,16 @@
 import React from 'react';
+import {
+  BrowserRouter as Router
+} from 'react-router-dom';
+import NaviBar from './components/NaviBar';
 import './app.css'
-import PreLogNav from './components/PreLogNav';
 
 function App() {
 
   return (
-    <div>
-      <PreLogNav />
-    </div>
+    <Router>
+      <NaviBar />
+    </Router>
   );
 }
 

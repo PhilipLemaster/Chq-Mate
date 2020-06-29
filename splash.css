@@ -90,16 +90,6 @@ img {
   #t5:target #p1{
     background: rgb(177, 79, 76);
   }
-
-  
-  
-  
-  #t2:target #p1 .icon, 
-  #t3:target #p1 .icon,
-  #t4:target #p1 .icon,
-  #t5:target #p1 .icon {
-    -webkit-filter: blur(3px);
-  }
   
   .icon {
     color: #fff;

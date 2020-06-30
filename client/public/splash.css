@@ -16,13 +16,6 @@ html,.page {
     margin: 0;
 }
 
-
-
-/* img {
-    width: 69px;
-    
-} */
-
  #aboutMe{
     width: 100%; height: auto; 
     background-image: url("about-bg.png");
@@ -31,25 +24,13 @@ html,.page {
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-    text-align: center;
-    
-    
+    text-align: center; 
 } 
 
-/* .Quote{
-    width: 100%; height: auto; padding: 15px; margin-top: 10px; text-align: center;
-
-}  */
-
  #gif-box {
-
-  
-  
 	width: 475px;
 	height: 360px;
 	padding: 125px 0;
-	/* margin-top: 80px;
-	margin-left: 700px; */
   background-position: center;
   position: absolute;
     top: 0;
@@ -59,14 +40,12 @@ html,.page {
     margin: auto;
     text-align: right;
 }
+
 #bottom{
 background: url('https://steamuserimages-a.akamaihd.net/ugc/924805627747624904/2DBF60E8C96C13F0E52A8916469428CA3896847B/')no-repeat;
-/* background: url('https://i.gifer.com/GuBX.gif')no-repeat; */
 width: 475px;
 height: 360px;
 padding: 125px 0;
-/* margin-top: 80px;
-margin-left: 700px; */
 background-position: center;
 position: absolute;
   top: -10%;

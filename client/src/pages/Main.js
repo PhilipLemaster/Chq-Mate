@@ -1,9 +1,10 @@
 import React from 'react';
-import PostLogNav from '../components/PostLogNav'
 
 function Main(props) {
     return(
-        <PostLogNav />
+        <div>
+            <h1>Main Page</h1>
+        </div>
     )
 }
 

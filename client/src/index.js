@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Auth0Provider } from "@auth0/auth0-react";
 import EditProfileForm from './components/EditProfileForm';
+import GameOptions  from './components/GameOptions';
 
 ReactDOM.render(
   <Auth0Provider
@@ -15,6 +16,11 @@ ReactDOM.render(
     <App />
   </Auth0Provider>,
   document.getElementById("root")
+);
+
+ReactDOM.render(
+  <GameOptions />,
+  document.getElementById("p2")
 );
 
 ReactDOM.render(

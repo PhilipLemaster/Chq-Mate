@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import GameCard from '../GameCard';
 import debounce from 'lodash.debounce';
+import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
+
 
 class GameOptions extends Component {
 
@@ -9,7 +11,8 @@ class GameOptions extends Component {
         super()
         this.state = {
             gameTitle: '',
-            gameData: []
+            gameData: [],
+            loading: 'Game Search'
         }
         this.handleChange = this.handleChange.bind(this)
             // Delay action 1.5 seconds
@@ -23,13 +26,20 @@ class GameOptions extends Component {
                 gameTitle: event.target.value.substr(0,1).toUpperCase() + event.target.value.substr(1).toLowerCase()
             })
             
-            this.onChangeDebounced()
-            }
+            this.onChangeDebounced(
+                this.setState({
+                    loading: 'Loading'
+                })
+            )}
 
             onChangeDebounced = () => {
 
                 // Make call to GameSpot API for titles
                 const queryUrl = 'https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=0e27e3e25c2d1e2fdf52fae8191317b1730d9589&format=json&filter=name:' + this.state.gameTitle + '&limit=10';
+
+                this.setState({
+                    loading: 'Game Search'
+                })
 
                 console.log(queryUrl);
                 
@@ -59,7 +69,10 @@ class GameOptions extends Component {
 
         return(
             <div>
-                <input type="text" placeholder="game name" onChange={this.handleChange}/>
+                <InputGroup>
+                    <InputGroupAddon addonType="prepend">{this.state.loading}</InputGroupAddon>
+                    <Input type="text" placeholder="Mario Party 3" onChange={this.handleChange}/>
+                </InputGroup>
                 {gameCards}
             </div>
         )

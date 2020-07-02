@@ -1,0 +1,17 @@
+.wholeCard {
+    display: inline-flex;
+    width: 9vw;
+    height: 50vh;
+    margin: auto;
+    text-align: center;
+}
+.cardImg {
+    height: 400px;
+    position: relative;
+    bottom: 130px;
+}
+
+.cardBody {
+    position: relative;
+    bottom: 266px;
+}

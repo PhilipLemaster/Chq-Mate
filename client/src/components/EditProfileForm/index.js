@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import './style.css';
+import GameDropdown from '../GameDropdown';
 
 const EditProfileForm = (props) => {
   return (
@@ -9,6 +10,7 @@ const EditProfileForm = (props) => {
           <Label for="gamertag">Gamertag</Label>
           <Input type="email" name="email" id="gamertag" placeholder="DarkNinja46" />
         </FormGroup>
+        <GameDropdown />
         <FormGroup>
           <Label for="consoleSelect">Primary Console</Label>
           <Input type="select" name="select" id="consoleSelect">

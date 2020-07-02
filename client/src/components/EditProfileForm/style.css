@@ -1,3 +1,7 @@
 .wholeForm {
     margin: 25px;
 }
+
+label, input {
+    color: black;
+}

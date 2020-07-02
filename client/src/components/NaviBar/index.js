@@ -14,7 +14,7 @@ import LoginButton from '../LoginButton'
 import LogoutButton from '../LogoutButton';
 import Profile from '../Profile';
 
-const PostLogNav = (props) => {
+const Navibar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -45,4 +45,4 @@ const PostLogNav = (props) => {
   );
 }
 
-export default PostLogNav;
+export default Navibar;

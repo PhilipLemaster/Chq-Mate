@@ -1,14 +1,15 @@
 import React from 'react';
-// import {
-//   BrowserRouter as Router
-// } from 'react-router-dom';
-// import NaviBar from './components/NaviBar';
+import {
+  BrowserRouter as Router
+} from 'react-router-dom';
+import SideNav from './components/SideNav';
 
 function App() {
 
   return (
-    <div>
-    </div>
+    <Router>
+      < SideNav />
+    </Router>
   );
 }
 

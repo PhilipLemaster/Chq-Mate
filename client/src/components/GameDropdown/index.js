@@ -8,12 +8,7 @@ function GameDropdown() {
 
     return(
         <FormGroup>
-            <Label for ='gameSearch'>Top Game Title:</Label>
-            <Input type='text' name='gameSearch' id='gameSearch'/>
-            <Button onClick={GameOptions} className="gapBut">Search</Button>
-            <br></br>
-            <Label for="titleSelect">Top Game</Label>
-            <Input type="select" name="select" id="titleSelect"></Input>
+            
         </FormGroup>
     )
 }

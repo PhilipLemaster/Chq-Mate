@@ -59,13 +59,7 @@ class GameOptions extends Component {
 
         return(
             <div>
-            <form onSubmit={this.handleSubmit}>
                 <input type="text" placeholder="game name" onChange={this.handleChange}/>
-                <button>Search Game</button>
-            </form>
-            <br></br>
-            <br></br>
-            <br></br>
                 {gameCards}
             </div>
         )

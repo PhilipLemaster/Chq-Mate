@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GameCard from '../GameCard';
+import debounce from 'lodash.debounce';
 
 class GameOptions extends Component {
 
@@ -11,31 +12,43 @@ class GameOptions extends Component {
             gameData: []
         }
         this.handleChange = this.handleChange.bind(this)
+            // Delay action 1.5 seconds
+        this.onChangeDebounced = debounce(this.onChangeDebounced, 1000)
     }
 
         handleChange(event) {
+
+            // Properly handle input
             this.setState({
                 gameTitle: event.target.value.substr(0,1).toUpperCase() + event.target.value.substr(1).toLowerCase()
             })
+            
+            this.onChangeDebounced()
+            }
+
+            onChangeDebounced = () => {
+
+                // Make call to GameSpot API for titles
+                const queryUrl = 'https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=0e27e3e25c2d1e2fdf52fae8191317b1730d9589&format=json&filter=name:' + this.state.gameTitle + '&limit=10';
+
+                console.log(queryUrl);
+                
+                fetch(queryUrl)
+
+                .then(response => response.json())
+                .then(response => {this.setState({ 
+                        gameData : response.results
+                    });
+                    console.log(response.results)
+                });
         }
+
+
+            
+        
 
         handleSubmit(event) {
             event.preventDefault();
-        }
-
-        componentDidMount(){
-            const queryUrl = 'https://cors-anywhere.herokuapp.com/http://www.gamespot.com/api/games/?api_key=0e27e3e25c2d1e2fdf52fae8191317b1730d9589&format=json&filter=name:' + this.state.gameTitle + '&limit=10';
-
-            console.log(queryUrl);
-            
-            fetch(queryUrl)
-
-            .then(response => response.json())
-            .then(response => {this.setState({ 
-                    gameData : response.results
-                });
-                console.log(response.results)
-            });
         }
 
     render() {
@@ -45,13 +58,14 @@ class GameOptions extends Component {
         
 
         return(
-            // <form onSubmit={this.handleSubmit}>
-            //     <input type="text" placeholder="game name" onChange={this.handleChange}/>
-            //     <h1>{this.state.gameTitle}</h1>
-            //     <button>Search Game</button>
-            //     <h1>Game name: {this.state.gameData.name}</h1>
-            // </form>
             <div>
+            <form onSubmit={this.handleSubmit}>
+                <input type="text" placeholder="game name" onChange={this.handleChange}/>
+                <button>Search Game</button>
+            </form>
+            <br></br>
+            <br></br>
+            <br></br>
                 {gameCards}
             </div>
         )

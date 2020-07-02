@@ -9,7 +9,12 @@ html,.page {
     -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);  
     color: #fff;
     overflow: hidden; 
+<<<<<<< HEAD
+    background: rgb(28, 27, 34);
+    
+=======
     background: #0E0E0E;
+>>>>>>> 02f6d0236aed7fec0d6af1cc616d0cbf05f7e363
   }
 
   body {
@@ -17,6 +22,7 @@ html,.page {
 }
 
  #aboutMe{
+
     width: 100%; height: auto; 
     background-image: url("about-bg.png");
     background-attachment: fixed;
@@ -24,10 +30,19 @@ html,.page {
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
+    text-align: center;
+     
+} 
+
+ #gif-box {
+
+=======
     text-align: center; 
 } 
 
  #gif-box {
+>>>>>>> 02f6d0236aed7fec0d6af1cc616d0cbf05f7e363
 	width: 475px;
 	height: 360px;
 	padding: 125px 0;

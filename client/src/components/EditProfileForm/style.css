@@ -1,7 +1,57 @@
 .wholeForm {
     margin: 25px;
+    position: relative;
+    bottom: 40px;
 }
 
-label, input {
+label, input, #consoleSelect, #gamertag, #userBio {
     color: black;
+    font-size: 15px;
+    font-family: 'MuseoModerno', cursive;
+    width: 20vw;
 }
+
+.uBGroup {
+  position: relative;
+  bottom: 70vh;
+  left: 23vw;
+}
+
+.picGroup, .submitBut {
+  position: relative;
+  bottom: 21vh;
+}
+
+.fGameGroup {
+  position: relative;
+  bottom: 61vh;
+  left: 45vw;
+}
+
+#favGame {
+  font-size: 26px;
+  color: #e4ff4d;
+}
+
+.ePHeading {
+    position: relative;
+    left: 58vw;
+    top: 18vh;
+    transform: rotate(10deg);
+    font-size: 60px;
+    color: rgb(214, 118, 214);
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+    font-family: 'Rock Salt', cursive;
+    z-index: 1;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }

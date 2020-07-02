@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import GameCard from '../GameCard';
 import debounce from 'lodash.debounce';
-import { InputGroup, InputGroupAddon, Input } from 'reactstrap';
-
+import { InputGroup, InputGroupAddon, Input, Button } from 'reactstrap';
+import './style.css';
 
 class GameOptions extends Component {
 
@@ -28,7 +28,7 @@ class GameOptions extends Component {
             
             this.onChangeDebounced(
                 this.setState({
-                    loading: 'Loading'
+                    loading: 'Loading...'
                 })
             )}
 
@@ -69,11 +69,13 @@ class GameOptions extends Component {
 
         return(
             <div>
-                <InputGroup>
-                    <InputGroupAddon addonType="prepend">{this.state.loading}</InputGroupAddon>
+                    <InputGroupAddon addonType="append">
+                        <Button style={{backgroundColor: 'rgb(214, 118, 214)'}} className="statusBut">{this.state.loading}</Button>
+                    </InputGroupAddon>
                     <Input type="text" placeholder="Mario Party 3" onChange={this.handleChange}/>
-                </InputGroup>
-                {gameCards}
+                <section className='gCardContainer'>
+                    {gameCards}
+                </section>
             </div>
         )
         

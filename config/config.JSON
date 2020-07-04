@@ -3,21 +3,21 @@
     "development": {
       "username": "root",
       "password": "abcd1234",
-      "database": "nodelogin",
+      "database": "chq_register",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
       "password": "abcd1234",
-      "database": "nodelogin",
+      "database": "chq_register",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "production": {
       "username": "root",
       "password": "abcd1234",
-      "database": "nodelogin",
+      "database": "chq_register",
       "host": "127.0.0.1",
       "dialect": "mysql"
     }

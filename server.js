@@ -7,6 +7,19 @@ const publicPath = path.join(__dirname, './chq-mate', 'public');
 
 app.use(express.static(publicPath));
 
+
+var db = require("./models");
+
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(express.static("public"));
+
+require("./routes/post-api-routes.js")(app);
+require("./routes/author-api-routes.js")(app);
+require("./routes/html-routes.js")(app);
+
 app.get('*', (req,res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 })
@@ -18,3 +31,9 @@ app.listen(PORT, () => {
 if (process.env.NODE_ENV == "production") {
     app.use(express.static("client/build"));
 }
+
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+      console.log("App listening on PORT " + PORT);
+    });
+  });

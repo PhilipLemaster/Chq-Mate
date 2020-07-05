@@ -21,8 +21,6 @@ const GameCard = (props) => {
             <Button onClick={populateTitle} className='favGameBut'>Select<input style={{visibility:'hidden'}} value={props.game.name} className={props.game.name}></input></Button>
           </CardBody>
         </Card>
-    
-        
   );
 };
 

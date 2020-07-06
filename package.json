@@ -24,7 +24,9 @@
   "homepage": "https://github.com/PhilipLemaster/Chq-Mate#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.5.0",
+    "cors": "^2.8.5",
     "lodash.debounce": "^4.0.8",
     "materialize-css": "^1.0.0-rc.2",
     "mysql": "^2.18.1",
@@ -32,6 +34,7 @@
     "prop-types": "^15.7.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
-    "reactstrap": "^8.5.1"
+    "reactstrap": "^8.5.1",
+    "sequelize": "^6.3.0"
   }
 }

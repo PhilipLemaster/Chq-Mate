@@ -1,22 +1,22 @@
-module.exports = (sequelize, Sequelize) => {
+module.exports = (sequelize, DataTypes) => {
     const Profile = sequelize.define('profile', {
-    email: {
-        type: Sequelize.STRING
-            },    
-    password: {
-        type: Sequelize.STRING
-            },
+    // email: {
+    //     type: Sequelize.STRING
+    //         },    
+    // password: {
+    //     type: Sequelize.STRING
+    //         },
     gamertag: {
-      type: Sequelize.STRING
+      type: DataTypes.STRING
       },
-      platform: {
-      type: Sequelize.STRING
+    console: {
+      type: DataTypes.STRING
       },
-      bio: {
-        type: Sequelize.INTEGER
+    bio: {
+        type: DataTypes.INTEGER
       },
-      topgame: {
-      type: Sequelize.STRING
+    topgame: {
+      type: DataTypes.STRING
       }
     });
     

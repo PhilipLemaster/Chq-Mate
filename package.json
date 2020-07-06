@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/PhilipLemaster/Chq-Mate#readme",
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.10.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "lodash.debounce": "^4.0.8",
@@ -32,6 +33,8 @@
     "prop-types": "^15.7.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
-    "reactstrap": "^8.5.1"
+    "react-use-auth": "^0.7.5",
+    "reactstrap": "^8.5.1",
+    "sequelize": "^6.3.0"
   }
 }

@@ -4,23 +4,20 @@
     "password": "abcd1234",
     "database": "chqprofiles",
     "host": "127.0.0.1",
-    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "abcd1234",
-    "database": "database_test",
+    "database": "chqprofiles",
     "host": "127.0.0.1",
-    "port": 3306,
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": "abcd1234",
-    "database": "database_production",
+    "database": "chqprofiles",
     "host": "127.0.0.1",
-    "port": 3306,
     "dialect": "mysql"
   }
 }

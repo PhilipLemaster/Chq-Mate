@@ -120,7 +120,7 @@ input:placeholder-shown  + label {
   box-shadow: 0 10px 20px rgb(139, 19, 19);
 }
 
-.login-left {
+.login-1 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -130,7 +130,7 @@ input:placeholder-shown  + label {
   overflow: hidden;
 }
 
-.login-left img {
+.login-1 img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -139,17 +139,17 @@ input:placeholder-shown  + label {
   object-position: left;
 }
 
-.open .login-left img {
+.open .login-1 img {
   -webkit-transform: translateX(280px) translateZ(0);  
           transform: translateX(280px) translateZ(0);  
 }
 
-.open .login-left {
+.open .login-1 {
   -webkit-transform: translateX(-400px) translateZ(0);
           transform: translateX(-400px) translateZ(0);
 } 
 
-.login-right {
+.login-2 {
   padding: 40px;
   position: absolute;
   top: 0;
@@ -160,7 +160,7 @@ input:placeholder-shown  + label {
   transition: all 770ms cubic-bezier(0.51, 0.04, 0.12, 0.99);
 }
 
-.open .login-right {
+.open .login-2 {
   -webkit-transform: translateX(0px) translateZ(0);
           transform: translateX(0px) translateZ(0);
 }

@@ -1,0 +1,14 @@
+.gCardContainer {
+    height: 400px;
+    width: 89vw;
+    margin: auto;
+    position: relative;
+    right: 94px;
+    background-image: url('../../assets/images/CMLogoText.png');
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    opacity: 80%;
+    background-color: rgb(17, 17, 17);
+    border: 1px solid rgb(17, 17, 19);
+}

@@ -1,20 +1,19 @@
-const express = require('express');
-const app = express();
-const path = require('path');
+var express = require("express");
+var app = express();
+var PORT = process.env.PORT || 8080;
 
-const PORT = process.env.PORT || 5600;
-const publicPath = path.join(__dirname, './chq-mate', 'public');
+var db = require("./models");
 
-app.use(express.static(publicPath));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.get('*', (req,res) => {
-    res.sendFile(path.join(publicPath, 'index.html'));
-})
+app.use(express.static("public"));
 
-app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}!`);
-})
+// require("./routes/api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
 
-if (process.env.NODE_ENV == "production") {
-    app.use(express.static("client/build"));
-}
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});

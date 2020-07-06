@@ -1,28 +1,30 @@
 import React from 'react';
-import './app.css'
-import PostLogNav from './components/PostLogNav';
-import EditProfileForm from './components/EditProfileForm';
-import JumboSplash from './components/JumboSplash';
-import PreLogNav from './components/PreLogNav';
-import CreateAccountForm from './components/CreateAccountForm';
-import MatchCards from './components/MatchCards';
+import Log from './pages/Log';
+import Main from './pages/Main';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
+  const {
+    isAuthenticated,
+  } = useAuth0();
 
-  return (
-    <div>
-      <PostLogNav />
-      <div className='cardContainer'>
-        <MatchCards profImg="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"/>
-      </div>
-      
-      {/* <CreateAccountForm /> */}
-      {/* <PreLogNav /> */}
-     
-      {/* <EditProfileForm /> */}
-      {/* <JumboSplash /> */}
-    </div>
-  );
+  if (!isAuthenticated) {
+    return(
+      <Log />
+    )
+  }
+
+  else if (isAuthenticated) {
+    return(
+      <Main />
+    )
+  }
+
+  // else {
+  //   return(
+
+  //   )
+  // }
 }
 
 export default App;

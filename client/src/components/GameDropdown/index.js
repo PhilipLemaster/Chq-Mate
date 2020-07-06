@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { FormGroup, Label, Input, Button } from 'reactstrap';
+import React from 'react';
+import { FormGroup } from 'reactstrap';
 import './style.css';
 import GameOptions from '../GameOptions';
 

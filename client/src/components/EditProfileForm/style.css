@@ -4,7 +4,7 @@
     bottom: 40px;
 }
 
-label, input, #consoleSelect, #gamertag, #userBio {
+label, input, #consoleSelect, #gamertag, #userBio, #typeSelect {
     color: black;
     font-size: 15px;
     font-family: 'MuseoModerno', cursive;
@@ -17,9 +17,15 @@ label, input, #consoleSelect, #gamertag, #userBio {
   left: 23vw;
 }
 
-.picGroup, .submitBut {
+.submitBut {
   position: relative;
-  bottom: 21vh;
+  bottom: 30vh;
+}
+
+.picGroup {
+  position: relative;
+  bottom: 95vh;
+  left: 23vw;
 }
 
 .fGameGroup {
@@ -31,6 +37,15 @@ label, input, #consoleSelect, #gamertag, #userBio {
 #favGame {
   font-size: 26px;
   color: #38b0e7;
+}
+
+.submitBut {
+  background-color: rgb(27, 27, 27);
+  transition: background-color 0.6s;
+}
+
+.submitBut:hover {
+  background-color: rgb(189, 117, 183);
 }
 
 .ePHeading {

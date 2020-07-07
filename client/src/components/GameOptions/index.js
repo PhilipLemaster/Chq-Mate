@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GameCard from '../GameCard';
 import debounce from 'lodash.debounce';
-import { InputGroup, InputGroupAddon, Input, Button } from 'reactstrap';
+import { InputGroupAddon, Input } from 'reactstrap';
 import './style.css';
 
 class GameOptions extends Component {

@@ -6,6 +6,7 @@
     text-align: center;
     position: relative;
     top: 18px;
+    z-index: 5;
 }
 .cardImg {
     height: 400px;

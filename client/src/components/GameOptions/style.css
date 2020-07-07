@@ -5,11 +5,10 @@
     margin: auto;
     position: relative;
     right: 94px;
-    /* background-image: url('../../assets/images/CMLogoText.png'); */
+/*     background-image: url('http://imgur.com/xdwS1hN.png'); */
     background-position: center;
     background-size: 60%;
     background-repeat: no-repeat;
-    opacity: 80%;
     background-color: rgb(17, 17, 17);
     border: 1px solid rgb(17, 17, 19);
 }

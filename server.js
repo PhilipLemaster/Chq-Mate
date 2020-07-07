@@ -13,7 +13,7 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, './client/build')))
 
 app.get('*', (req,res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
@@ -24,7 +24,7 @@ app.listen(PORT, () => {
 })
 
 if (process.env.NODE_ENV == "production") {
-    app.use(express.static("client/build"));
+    app.use(express.static("./client/build/index.html"));
 }
 
 db.sequelize.sync({force: true}).then(() => {

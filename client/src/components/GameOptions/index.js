@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GameCard from '../GameCard';
 import debounce from 'lodash.debounce';
-import { InputGroupAddon, Input } from 'reactstrap';
+import { InputGroupAddon, Input, Label } from 'reactstrap';
 import './style.css';
 
 class GameOptions extends Component {
@@ -35,7 +35,7 @@ class GameOptions extends Component {
             onChangeDebounced = () => {
 
                 // Make call to GameSpot API for titles
-                const queryUrl = 'https://boiling-journey-58609.herokuapp.com/http://www.gamespot.com/api/games/?api_key=0e27e3e25c2d1e2fdf52fae8191317b1730d9589&format=json&filter=name:' + this.state.gameTitle + '&limit=10';
+                const queryUrl = 'https://boiling-journey-58609.herokuapp.com/http://www.gamespot.com/api/games/?api_key=0e27e3e25c2d1e2fdf52fae8191317b1730d9589&format=json&filter=name:' + this.state.gameTitle + '&limit=8';
 
                 this.setState({
                     loading: 'Game Search'
@@ -68,15 +68,15 @@ class GameOptions extends Component {
         
 
         return(
-            <div>
+                <div>
                     <InputGroupAddon addonType="append">
-                        <h1 className="statusBut">{this.state.loading}</h1>
+                        <Label className="statusBut">{this.state.loading}</Label>
                     </InputGroupAddon>
-                    <Input type="text" placeholder="Type Here" onChange={this.handleChange}/>
-                <section className='gCardContainer'>
-                    {gameCards}
-                </section>
-            </div>
+                    <Input type="text" placeholder="Type Here" onChange={this.handleChange} id="gameSearch"/>
+                    <section className='gCardContainer'>
+                        {gameCards}
+                    </section>
+                </div>
         )
         
         

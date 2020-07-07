@@ -16,7 +16,7 @@ function Main() {
                                 <SideNav />
                                 <LogoutButton />
                                 <div className="page" id="p2">
-                                    <GameOptions />
+                                    <h1>Matches</h1>
                                 </div>  
                                 <div className="page" id="p3">
                                     <section className="icon fa fa-rocket"><span className="title">Rocket</span></section>

@@ -70,7 +70,7 @@ class GameOptions extends Component {
         return(
             <div>
                     <InputGroupAddon addonType="append">
-                        <Button style={{backgroundColor: 'rgb(214, 118, 214)'}} className="statusBut">{this.state.loading}</Button>
+                        <h1  className="statusBut">{this.state.loading}</h1>
                     </InputGroupAddon>
                     <Input type="text" placeholder="Mario Party 3" onChange={this.handleChange}/>
                 <section className='gCardContainer'>

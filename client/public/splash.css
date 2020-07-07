@@ -9,7 +9,7 @@ html,.page {
     -o-transition: all .6s cubic-bezier(.5, .2, .2, 1.1);  
     color: #fff;
     overflow: hidden; 
-    background-image: url("https://cdn.wallpapersafari.com/74/77/GOsm1H.gif")
+    background-image: url("https://wallpapercave.com/wp/wp2757874.gif")
     
     
   }
@@ -19,7 +19,6 @@ html,.page {
 }
 
  #aboutMe{
-
     width: 100%; height: auto; 
     background-image: url("about-bg.png");
     background-attachment: fixed;
@@ -115,10 +114,10 @@ img {
   }
   
   #p1 { background: rgb(26, 23, 36); }
-  #p2 { background: tomato; }
-  #p3 { background: rgb(129, 24, 77); }
-  #p4 { background: rgb(190, 22, 112); }
-  #p5 { background: rgb(55, 135, 209); }
+  #p2 { background: rgba(255, 99, 71, 0.699); }
+  #p3 { background: rgba(129, 24, 77, 0.719); }
+  #p4 { background: rgba(145, 61, 241, 0.432); }
+  #p5 { background: rgba(123, 139, 230, 0.459); }
   
   #t2:target #p2,
   #t3:target #p3,

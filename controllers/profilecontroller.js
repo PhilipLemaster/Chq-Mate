@@ -1,4 +1,4 @@
-const db = require('../config/index.js');
+const db = require('../models');
 const Profile = db.profile;
  
 // Post a Profile

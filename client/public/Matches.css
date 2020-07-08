@@ -7,7 +7,7 @@
   }
   
 .md-card-image {
-    width: 120px; height: 120px; border-radius: 50%; 
+    border-radius: 20%; 
     background-image: url("person.png"); background-size: cover;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
 }

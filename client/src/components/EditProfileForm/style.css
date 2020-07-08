@@ -45,7 +45,7 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
 }
 
 .submitBut:hover {
-  background-color: rgb(189, 117, 183);
+  background-color: rgba(189, 117, 183, 0.678);
 }
 
 .ePHeading {

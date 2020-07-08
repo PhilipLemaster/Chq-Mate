@@ -1,6 +1,5 @@
 import React from 'react';
 import SideNav from '../../components/SideNav';
-import GameOptions from '../../components/GameOptions';
 import EditProfileForm from '../../components/EditProfileForm';
 import LogoutButton from '../../components/LogoutButton';
 import './main.css';

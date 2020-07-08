@@ -10,7 +10,7 @@ const EditProfileForm = (props) => {
       <Form className='wholeForm'>
         <FormGroup>
           <Label for="gamertag">Gamertag</Label>
-          <Input type="email" name="email" id="gamertag" placeholder="CaptainTeal" />
+          <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" />
         </FormGroup>
         <FormGroup>
           <Label for="consoleSelect">Primary Console</Label>
@@ -22,8 +22,8 @@ const EditProfileForm = (props) => {
           </Input>
         </FormGroup>
         <FormGroup>
-          <Label for="typeSelect">Type</Label>
-          <Input type="select" name="typeSelect" id="typeSelect">
+          <Label for="styleSelect">Type</Label>
+          <Input type="select" name="styleSelect" id="styleSelect">
             <option>Casual</option>
             <option>Competitive</option>
             <option>Speedrunner</option>

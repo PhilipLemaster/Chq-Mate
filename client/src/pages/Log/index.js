@@ -12,9 +12,9 @@ function Log() {
                     <div className="h1" onClick={loginFunct}>Welcome to ChqMate</div>
                 </div>
                 <div className="login-right">
+                    <h1 className="dangerGreet">It's Dangerous To Go Alone...</h1>
                     <div className="button-area">
                         <LoginButton />
-                        <LogoutButton />
                     </div>
                 </div>
             </div>

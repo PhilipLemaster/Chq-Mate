@@ -1,0 +1,16 @@
+.logoutBut {
+    font-family: 'Press Start 2P', cursive;
+    background-color: rgb(192, 51, 51);
+    transition: background-color 0.8s;
+    border-radius: 5px;
+    position: relative;
+    left: 18px;
+    bottom: 10px;
+    padding: 5px;
+    margin: 20px;
+    margin-left: -15px;
+}
+
+.logoutBut:hover {
+    background-color: rgb(216, 144, 144);
+}

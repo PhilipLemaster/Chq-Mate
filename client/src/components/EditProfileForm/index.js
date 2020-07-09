@@ -10,15 +10,23 @@ const EditProfileForm = (props) => {
       <Form className='wholeForm'>
         <FormGroup>
           <Label for="gamertag">Gamertag</Label>
-          <Input type="email" name="email" id="gamertag" placeholder="DarkNinja46" />
+          <Input type="email" name="email" id="gamertag" placeholder="CaptainTeal" />
         </FormGroup>
         <FormGroup>
           <Label for="consoleSelect">Primary Console</Label>
-          <Input type="select" name="select" id="consoleSelect">
+          <Input type="select" name="conSelect" id="consoleSelect">
             <option>Xbox One</option>
             <option>Playstation 4</option>
             <option>Nintendo Switch</option>
             <option>PC</option>
+          </Input>
+        </FormGroup>
+        <FormGroup>
+          <Label for="typeSelect">Type</Label>
+          <Input type="select" name="typeSelect" id="typeSelect">
+            <option>Casual</option>
+            <option>Competitive</option>
+            <option>Speedrunner</option>
           </Input>
         </FormGroup>
         <GameDropdown />

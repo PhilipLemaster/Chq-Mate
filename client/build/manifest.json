@@ -1,0 +1,8 @@
+{
+  "short_name": "Chq Mate",
+  "name": "Chq Mate: The App for Building a Party",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

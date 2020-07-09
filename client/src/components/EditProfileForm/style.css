@@ -4,7 +4,7 @@
     bottom: 40px;
 }
 
-label, input, #consoleSelect, #gamertag, #userBio {
+label, input, #consoleSelect, #gamertag, #userBio, #typeSelect {
     color: black;
     font-size: 15px;
     font-family: 'MuseoModerno', cursive;
@@ -17,9 +17,15 @@ label, input, #consoleSelect, #gamertag, #userBio {
   left: 23vw;
 }
 
-.picGroup, .submitBut {
+.submitBut {
   position: relative;
-  bottom: 21vh;
+  bottom: 30vh;
+}
+
+.picGroup {
+  position: relative;
+  bottom: 95vh;
+  left: 23vw;
 }
 
 .fGameGroup {
@@ -30,7 +36,16 @@ label, input, #consoleSelect, #gamertag, #userBio {
 
 #favGame {
   font-size: 26px;
-  color: #e4ff4d;
+  color: #38b0e7;
+}
+
+.submitBut {
+  background-color: rgb(27, 27, 27);
+  transition: background-color 0.6s;
+}
+
+.submitBut:hover {
+  background-color: rgb(189, 117, 183);
 }
 
 .ePHeading {
@@ -39,7 +54,7 @@ label, input, #consoleSelect, #gamertag, #userBio {
     top: 18vh;
     transform: rotate(10deg);
     font-size: 60px;
-    color: rgb(214, 118, 214);
+    color: rgb(226, 84, 127);
     -webkit-animation: glow 2s ease-in-out infinite alternate;
     -moz-animation: glow 2s ease-in-out infinite alternate;
     animation: glow 2s ease-in-out infinite alternate;
@@ -48,10 +63,10 @@ label, input, #consoleSelect, #gamertag, #userBio {
 }
 
 @keyframes glow {
-    from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-    }
-    to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-    }
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px #8d0b4c, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
   }

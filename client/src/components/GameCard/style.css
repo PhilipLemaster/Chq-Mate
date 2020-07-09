@@ -1,24 +1,27 @@
 .wholeCard {
     display: inline-flex;
-    width: 8.8899vw;
-    height: 37vh;
-    margin: auto;
+    width: 213.3px;
+    height: 380px;
     text-align: center;
-    position: relative;
-    top: 18px;
 }
+
+.card-img {
+    margin: 0;
+    padding: 0;
+}
+
 .cardImg {
-    height: 400px;
-    position: relative;
-    bottom: 130px;
+    object-fit: contain;
+    object-position: top;
+    height: 105px;
 }
 
 .cardBody {
-    position: relative;
-    bottom: 266px;
+    font-family: 'MuseoModerno', cursive;
 }
 
 .favGameBut {
+    background-color: rgb(27, 27, 27);
     transition: background-color 0.6s;
 }
 

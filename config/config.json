@@ -1,23 +1,25 @@
 {
   "development": {
-    "username": "root",
-    "password": "abcd1234",
-    "database": "chqprofiles",
-    "host": "127.0.0.1",
+    "username": "htgcqagf7zzadjdi",
+    "password": "y9yz47fbcvy8bcoj",
+    "database": "gu7a7bv53ib8q36d",
+    "host": "e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "abcd1234",
+    "password": "root64",
     "database": "chqprofiles",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "abcd1234",
-    "database": "chqprofiles",
-    "host": "127.0.0.1",
+    "username": "htgcqagf7zzadjdi",
+    "password": "y9yz47fbcvy8bcoj",
+    "database": "gu7a7bv53ib8q36d",
+    "host": "e764qqay0xlsc4cz.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": "3306",
     "dialect": "mysql"
   }
 }

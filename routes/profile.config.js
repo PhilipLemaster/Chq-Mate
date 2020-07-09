@@ -3,7 +3,7 @@ module.exports = function(app) {
     const profiles = require('../controller/profilecontroller.js');
  
     // Create a new Customer
-    app.post('/api/profiles', profile.create);
+    app.post('/api/profile', profile.create);
  
     // Retrieve all Customer
     app.get('/api/profiles', profile.findAll);

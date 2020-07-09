@@ -4,34 +4,34 @@
     bottom: 40px;
 }
 
-label, input, #consoleSelect, #gamertag, #userBio, #typeSelect {
+label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
     color: black;
     font-size: 15px;
     font-family: 'MuseoModerno', cursive;
-    width: 20vw;
+    width: 390px;
 }
 
 .uBGroup {
   position: relative;
-  bottom: 70vh;
-  left: 23vw;
+  bottom: 680px;
+  left: 440px;
 }
 
 .submitBut {
   position: relative;
-  bottom: 30vh;
+  bottom: 290px;
 }
 
 .picGroup {
   position: relative;
-  bottom: 95vh;
-  left: 23vw;
+  bottom: 910px;
+  left: 441px;
 }
 
 .fGameGroup {
   position: relative;
-  bottom: 61vh;
-  left: 45vw;
+  bottom: 590px;
+  left: 870px;
 }
 
 #favGame {
@@ -45,13 +45,13 @@ label, input, #consoleSelect, #gamertag, #userBio, #typeSelect {
 }
 
 .submitBut:hover {
-  background-color: rgb(189, 117, 183);
+  background-color: rgba(189, 117, 183, 0.678);
 }
 
 .ePHeading {
     position: relative;
-    left: 58vw;
-    top: 18vh;
+    left: 1130px;
+    top: 185px;
     transform: rotate(10deg);
     font-size: 60px;
     color: rgb(226, 84, 127);

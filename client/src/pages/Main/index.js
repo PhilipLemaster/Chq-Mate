@@ -1,8 +1,8 @@
 import React from 'react';
 import SideNav from '../../components/SideNav';
-import GameOptions from '../../components/GameOptions';
 import EditProfileForm from '../../components/EditProfileForm';
 import LogoutButton from '../../components/LogoutButton';
+import Profile from '../../components/Profile';
 import './main.css';
 
 function Main() {
@@ -16,7 +16,8 @@ function Main() {
                                 <SideNav />
                                 <LogoutButton />
                                 <div className="page" id="p2">
-                                    <h1>Matches</h1>
+                                    <h1>Profile Matches</h1>
+                                    <Profile />
                                 </div>  
                                 <div className="page" id="p3">
                                     <section className="icon fa fa-rocket"><span className="title">Rocket</span></section>
@@ -28,7 +29,6 @@ function Main() {
                                         <span>Hello</span> 
                                     </p>
                                     </section>
-                                    
                                 </div> 
                                 <div className="page" id="p5">
                                     <EditProfileForm />

@@ -1,11 +1,8 @@
 module.exports = (sequelize, DataTypes) => {
     const Profile = sequelize.define('profile', {
-    // email: {
-    //     type: Sequelize.STRING
-    //         },    
-    // password: {
-    //     type: Sequelize.STRING
-    //         },
+    email: {
+        type: DataTypes.STRING
+            },    
     gamertag: {
       type: DataTypes.STRING
       },
@@ -16,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER
       },
     topgame: {
+      type: DataTypes.STRING
+      },
+    style: {
       type: DataTypes.STRING
       }
     });

@@ -5,14 +5,13 @@
 }
 
 #wholeLog {
-  margin-inline-start: 29vw;
-  margin-block-start: 20vh;
+  margin-inline-start: 600px;
+  margin-block-start: 240px;
   font-family: 'Righteous', cursive;
 }
 
 body {
   height: 100%;
-  text-shadow: -1px 1px 0 rgb(114, 1, 71);
   background: url("https://wallpapercave.com/wp/wp2757874.gif");
   overflow: hidden;
 }
@@ -143,4 +142,11 @@ body {
 
 .btn-secondary {
   color: #618fa5;  
+}
+
+.dangerGreet {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
 }

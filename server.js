@@ -1,19 +1,22 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-var bodyParser = require('body-parser');
 var db = require("./models");
-app.use(bodyParser.json())
+const cors = require('cors');
+const routes = require('./routes');
 
-const PORT = process.env.PORT || 5600;
+const PORT = process.env.PORT || 3001;
 const publicPath = path.join(__dirname, './chq-mate', 'public');
 
 app.use(express.static(publicPath));
+app.use(cors());
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, './client/build')))
+
+app.use(routes);
 
 app.get('*', (req,res) => {
     res.sendFile(path.join(publicPath, 'index.html'));

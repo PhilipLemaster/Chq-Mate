@@ -1,57 +1,93 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import './style.css';
 import GameDropdown from '../GameDropdown';
+import axios from 'axios';
+import { useAuth0 } from "@auth0/auth0-react";
 
-const EditProfileForm = (props) => {
-  return (
-    <div>
-      <h1 className='ePHeading'>EDIT PROFILE</h1>
-      <Form className='wholeForm'>
-        <FormGroup>
-          <Label for="gamertag">Gamertag</Label>
-          <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" />
-        </FormGroup>
-        <FormGroup>
-          <Label for="consoleSelect">Primary Console</Label>
-          <Input type="select" name="conSelect" id="consoleSelect">
-            <option>Xbox One</option>
-            <option>Playstation 4</option>
-            <option>Nintendo Switch</option>
-            <option>PC</option>
-          </Input>
-        </FormGroup>
-        <FormGroup>
-          <Label for="styleSelect">Type</Label>
-          <Input type="select" name="styleSelect" id="styleSelect">
-            <option>Casual</option>
-            <option>Competitive</option>
-            <option>Speedrunner</option>
-          </Input>
-        </FormGroup>
-        <GameDropdown />
-        <FormGroup className="fGameGroup">
-          <Label for="favGame">Top Game</Label>
-          <Input type="text" name="game" id="favGame" readOnly/>
-        </FormGroup>
-        <FormGroup className= 'uBGroup'>
-          <Label for="userBio">User Bio</Label>
-          <Input type="textarea" name="text" id="userBio" maxLength="100" />
-          <FormText color="muted">
-          Max Length: 100 characters
-          </FormText>
-        </FormGroup>
-        <FormGroup className="picGroup">
-          <Label for="profilePicture">Profile Picture</Label>
-          <Input type="file" name="file" id="profilePicture" />
-          <FormText color="muted">
-            Ensure that profile image is appropriate and follows all Chq Mate terms of use
-          </FormText>
-        </FormGroup>
-        <Button className="submitBut">Submit</Button>
-      </Form>
-    </div>
-  );
+class EditProfileForm extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+       email: '',
+       gamertag: '',
+       console: '',
+       bio: '',
+       topgame: '',
+       style: ''
+    }
+  }
+
+  onChange = (e) => {
+    this.setState({ 
+      [e.target.name]: e.target.value
+     })
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state)
+    axios.post('localhost:3000', this.state)
+    .then(response => {
+      console.log(response)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
+
+
+  render() {
+
+    return (
+      <div>
+        <h1 className='ePHeading'>EDIT PROFILE</h1>
+        <Form className='wholeForm' onSubmit={this.handleSubmit}>
+          <FormGroup>
+            <Label for="gamertag">Gamertag</Label>
+            <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" onChange={this.onChange }/>
+          </FormGroup>
+          <FormGroup>
+            <Label for="consoleSelect">Primary Console</Label>
+            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange }>
+              <option value="" disabled selected>Select Your Option</option>
+              <option>Xbox One</option>
+              <option>Playstation 4</option>
+              <option>Nintendo Switch</option>
+              <option>PC</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label for="styleSelect">Style</Label>
+            <Input type="select" name="style" id="styleSelect" onChange={this.onChange }>
+              <option value="" disabled selected>Select Your Option</option>
+              <option>Casual</option>
+              <option>Competitive</option>
+              <option>Speedrunner</option>
+            </Input>
+          </FormGroup>
+          <GameDropdown />
+          <FormGroup className="fGameGroup">
+            <Label for="favGame">Top Game</Label>
+            <Input type="text" name="topgame" id="favGame" readOnly/>
+          </FormGroup>
+          <FormGroup className= 'uBGroup'>
+            <Label for="userBio">User Bio</Label>
+            <Input type="textarea" name="bio" id="userBio" maxLength="100" onChange={this.onChange }/>
+            <FormText color="muted">
+            Max Length: 100 characters
+            </FormText>
+          </FormGroup>
+          <FormGroup className="emailGroup">
+            <Label for="emailGroup">Email</Label>
+            <Input type="email" name="email" id="email" readOnly value="hello@gmail.com" />
+          </FormGroup>
+          <Button className="submitBut">Submit</Button>
+        </Form>
+      </div>
+    );
+  }
 }
 
 export default EditProfileForm;

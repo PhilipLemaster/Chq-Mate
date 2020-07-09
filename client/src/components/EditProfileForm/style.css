@@ -22,7 +22,7 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
   bottom: 290px;
 }
 
-.picGroup {
+.emailGroup {
   position: relative;
   bottom: 910px;
   left: 441px;
@@ -34,7 +34,7 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
   left: 870px;
 }
 
-#favGame {
+#favGame, #email {
   font-size: 26px;
   color: #38b0e7;
 }

@@ -1,5 +1,5 @@
-const db = require('../config/index.js');
-const Profile = db.profile;
+const db = require('../models');
+const Profile = db.Profile;
  
 // Post a Profile
 exports.create = (req, res) => {  

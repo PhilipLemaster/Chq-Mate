@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const Profile = sequelize.define('profile', {
+    const Profile = sequelize.define('Profile', {
 
     email: {
         type: DataTypes.STRING
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       },
 
       
-    });
+    },{});
     
     return Profile;
     

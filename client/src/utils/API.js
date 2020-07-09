@@ -7,14 +7,14 @@ export default {
 //   },
   // Gets all saved books
   getSavedProfile: function() {
-    return axios.get("/api/profile");
+    return axios.get("/api");
   },
   // Deletes the saved book with the given id
   deleteProfile: function(id) {
-    return axios.delete("/api/profile/" + id);
+    return axios.delete("/api" + id);
   },
   // Saves an book to the database
   saveProfile: function(profileData) {
-    return axios.post("/api/profile", profileData);
+    return axios.post("/api", profileData);
   }
 };

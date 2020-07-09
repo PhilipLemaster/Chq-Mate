@@ -11,6 +11,6 @@ router
   .route("/:id")
   .get(profilecontroller.findById)
   .put(profilecontroller.update)
-  .delete(profilecontroller.remove);
+  .delete(profilecontroller.delete);
 
 module.exports = router;

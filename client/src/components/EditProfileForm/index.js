@@ -28,7 +28,7 @@ class EditProfileForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state)
-    axios.post('localhost:3000', this.state)
+    axios.post('/api', this.state)
     .then(response => {
       console.log(response)
     })
@@ -37,6 +37,7 @@ class EditProfileForm extends Component {
     })
   }
 
+  
 
   render() {
 

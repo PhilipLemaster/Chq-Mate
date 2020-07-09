@@ -1,0 +1,21 @@
+.matchCard {
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+    padding-block-start: 40px;
+    border-radius: 10px;
+    box-shadow: black 2px 3px;
+    text-align: center;
+}
+
+.matchImg {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: black 2px 3px;
+    align-self: center;
+}
+
+.cardGTag {
+    margin: 5px;
+}

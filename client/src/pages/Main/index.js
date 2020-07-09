@@ -2,22 +2,22 @@ import React from 'react';
 import SideNav from '../../components/SideNav';
 import EditProfileForm from '../../components/EditProfileForm';
 import LogoutButton from '../../components/LogoutButton';
-import Profile from '../../components/Profile';
+import MatchCard from '../../components/MatchCard';
 import './main.css';
+import MainGreeting from '../../components/MainGreeting';
 
 function Main() {
     return(
         <div>
+            <SideNav />
             <div className="ct" id="t1">
                 <div className="ct" id="t2">
                     <div className="ct" id="t3">
                         <div className="ct" id="t4">
                             <div className="ct" id="t5">
-                                <SideNav />
-                                <LogoutButton />
                                 <div className="page" id="p2">
                                     <h1>Profile Matches</h1>
-                                    <Profile />
+                                    <MatchCard />
                                 </div>  
                                 <div className="page" id="p3">
                                     <section className="icon fa fa-rocket"><span className="title">Rocket</span></section>
@@ -37,7 +37,9 @@ function Main() {
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
+            <LogoutButton />
+            <MainGreeting />
         </div>
         
     )

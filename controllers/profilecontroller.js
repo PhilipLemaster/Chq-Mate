@@ -10,7 +10,8 @@ exports.create = (req, res) => {
     gamertag: req.body.gamertag,
     platform: req.body.platform,
     bio: req.body.bio,
-    topgame: req.body.topgame
+    topgame: req.body.topgame,
+    style: req.body.style
   }).then(profile => {    
     // Send created profile to client
     res.send(profile);

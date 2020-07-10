@@ -15,14 +15,16 @@ class Main extends Component {
         this.state = {
             id: ''
         }
+
+        this.reLoad = this.reLoad.bind(this);
       }
     
 
-      componentDidMount() {
+      componentDidMount = () => {
           this.getInfo();
       }
 
-      getInfo() {
+      getInfo = () => {
         const email = document.getElementById('email').value
 
         axios.get('/api', {
@@ -30,7 +32,7 @@ class Main extends Component {
               email: email
             }
           })
-          .then(function(response) {
+          .then((response) => {
             console.log(response);
             if (response.data[0]) {
                 const myId = response.data[0].id;
@@ -41,8 +43,13 @@ class Main extends Component {
           })
         }
 
+        reLoad = () => {
+            this.getInfo();
+            this.forceUpdate();
+          }
+
     render() {
-        if(this.state.id) {
+        if(this.state.id !== '') {
             return(
                 <div>
                     <SideNav />
@@ -56,7 +63,7 @@ class Main extends Component {
                                             <MatchCard myId={this.state.id}/>
                                         </div>  
                                         <div className="page" id="p3">
-                                            <CreateProfileForm />
+                                            <h1>Filler</h1>
                                         </div>
                                         <div className="page" id="p4">
                                             <section className="icon fas fa-search">
@@ -82,7 +89,7 @@ class Main extends Component {
 
         else {
             return(
-                <CreateProfileForm />
+                <CreateProfileForm reLoad={this.reLoad}/>
             )
         }
         

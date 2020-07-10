@@ -33,14 +33,18 @@ class CreateProfileForm extends Component {
     }
 
     else {
-      axios.post('/api', this.state)
-      .then(response => {
-        console.log(response)
-      })
-      .catch(error => {
-        console.log(error)
-      })
+      this.createUser();
     }
+  }
+
+  createUser = async () => {
+    try {
+      const response = await axios.post('/api', this.state);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+    this.props.reLoad();
   }
 
   componentDidMount = () => {
@@ -65,11 +69,11 @@ class CreateProfileForm extends Component {
         <Form className='wholeCreateForm' onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label for="gamertag" className="cLabels">Gamertag</Label>
-            <Input type="text" name="gamertag" id="gamertagC" placeholder="CaptainTeal" onChange={this.onChange}/>
+            <Input type="text" name="gamertag" id="gamertagC" placeholder="CaptainTeal" onChange={this.onChange} required/>
           </FormGroup>
           <FormGroup>
             <Label for="consoleSelect" className="cLabels">Primary Console</Label>
-            <Input type="select" name="console" id="consoleSelectC" onChange={this.onChange}>
+            <Input type="select" name="console" id="consoleSelectC" onChange={this.onChange} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Xbox One</option>
               <option>Playstation 4</option>
@@ -79,7 +83,7 @@ class CreateProfileForm extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="styleSelect" className="cLabels">Style</Label>
-            <Input type="select" name="style" id="styleSelectC" onChange={this.onChange}>
+            <Input type="select" name="style" id="styleSelectC" onChange={this.onChange} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Casual</option>
               <option>Competitive</option>
@@ -89,7 +93,7 @@ class CreateProfileForm extends Component {
           <GameOptions class="cLabels"/>
           <FormGroup className="fGameGroupC">
             <Label for="favGame" className="cLabels">Top Game</Label>
-            <Input type="text" name="topgame" id="favGame" readOnly/>
+            <Input type="text" name="topgame" id="favGame" readOnly required/>
             <Button className="confirmBut" onClick={this.confirmGame}>Confirm</Button>
           </FormGroup>
           <FormGroup className= 'uBGroupC'>

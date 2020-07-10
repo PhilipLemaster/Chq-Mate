@@ -50,21 +50,6 @@ class EditProfileForm extends Component {
     }
   }
 
-  // updateUser = async () => {
-  //   try {
-  //     const response = await axios.put('/api', this.state,
-  //     {
-  //       params: {
-  //         id: this.props.myId
-  //       }
-  //     });
-  //     console.log(response);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  //   this.props.reLoad();
-  // }
-
   componentDidMount = () => {
     const email = document.getElementById('email').value
     this.setState({ 

@@ -4,7 +4,6 @@ import './style.css';
 
 function MainGreeting() {
     const { user } = useAuth0();
-    console.log(user);
     return(
         <div>
             <h1 className="greetMsg">Welcome, {user.name}</h1>

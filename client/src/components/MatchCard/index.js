@@ -1,23 +1,29 @@
 import React from 'react';
-import { Card, Button, CardTitle, CardImg, CardText } from 'reactstrap';
+import { Card, Button, CardImg } from 'reactstrap';
 import { useAuth0 } from "@auth0/auth0-react";
 import './style.css';
-import competitiveIcon from '../../assets/icons/competitive.png';
+import Competitive from '../../assets/icons/competitive.png';
+import Casual from '../../assets/icons/casual.png';
+import Speedrunner from '../../assets/icons/speedrun.png';
 import pcIcon from '../../assets/icons/pc.png';
 
-function MatchCard() {
+const MatchCard = (props) => {
 
     const { user } = useAuth0();
+    
+    if(props.match.style === "Competitive") {
+        const styleIcon = {Competitive}
+    }
 
     return(
         <Card body inverse style={{ backgroundColor: '#232136' }} className="matchCard">
-            <img src={competitiveIcon} alt="typeIcon" className="typeIcon"></img>
-            <img src={pcIcon} alt="consoleIcon" className="consoleIcon"></img>
+            <img alt="typeIcon" className="typeIcon" id={props.match.style}></img>
+            <img alt="consoleIcon" className="consoleIcon" id={props.match.console}></img>
             <div>
                 <CardImg src={user.picture} className="matchImg"/>
-                <h2 className="cardGTag">ZeusOrangejuice</h2>
-                <p className="cardFGame">Super Smash Bros.</p>
-                <p className="cardBio">I'm just a cool d00d from Charlotte. I main Dr. Mario in Smash and play jungle on LoL. Hit me up yo.</p>
+                <h2 className="cardGTag">{props.match.gamertag}</h2>
+                <p className="cardFGame">{props.match.topgame}</p>
+                <p className="cardBio">{props.match.bio}</p>
                 <Button className="cardBut">Message</Button>
             </div>
         </Card>

@@ -5,7 +5,6 @@ import matchIcon from '../../assets/icons/match.png';
 import editIcon from '../../assets/icons/edit.png';
 import topIcon from '../../assets/icons/topgames.png';
 import chatIcon from '../../assets/icons/chat.png';
-import axios from 'axios';
 
 class SideNav extends Component {
 

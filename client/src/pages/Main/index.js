@@ -2,7 +2,7 @@ import React, { Component }from 'react';
 import SideNav from '../../components/SideNav';
 import EditProfileForm from '../../components/EditProfileForm';
 import LogoutButton from '../../components/LogoutButton';
-import MatchCard from '../../components/MatchCard';
+import Matches from '../../components/Matches';
 import MainGreeting from '../../components/MainGreeting';
 import CreateProfileForm from '../../components/CreateProfileForm';
 import './main.css';
@@ -38,7 +38,6 @@ class Main extends Component {
             }
           })
           .then((response) => {
-            console.log(response);
             if (response.data[0]) {
                 const data = response.data[0]
                 const myId = parseInt(data.id);
@@ -71,7 +70,10 @@ class Main extends Component {
                                     <div className="ct" id="t5">
                                         <div className="page" id="p2">
                                             <h1>Profile Matches</h1>
-                                            <MatchCard myId={this.state.id}/>
+                                            <Matches 
+                                            console={this.state.console} 
+                                            topgame={this.state.topgame} 
+                                            style={this.state.style}/>
                                         </div>  
                                         <div className="page" id="p3">
                                             <h1>Filler</h1>

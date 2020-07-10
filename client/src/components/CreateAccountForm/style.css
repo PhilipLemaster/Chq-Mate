@@ -1,0 +1,66 @@
+.wholeForm {
+    margin: 25px;
+    position: relative;
+    bottom: 40px;
+}
+
+label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
+    color: black;
+    font-size: 15px;
+    font-family: 'MuseoModerno', cursive;
+    width: 390px;
+}
+
+.uBGroup {
+  position: relative;
+  bottom: 680px;
+  left: 440px;
+}
+
+.submitBut {
+  position: relative;
+  bottom: 290px;
+}
+
+.fGameGroup {
+  position: relative;
+  bottom: 590px;
+  left: 870px;
+}
+
+#favGame, #email {
+  font-size: 26px;
+  color: #38b0e7;
+}
+
+.submitBut {
+  background-color: rgb(27, 27, 27);
+  transition: background-color 0.6s;
+}
+
+.submitBut:hover {
+  background-color: rgba(189, 117, 183, 0.678);
+}
+
+.ePHeading {
+    position: relative;
+    left: 1130px;
+    top: 185px;
+    transform: rotate(10deg);
+    font-size: 60px;
+    color: rgb(226, 84, 127);
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+    font-family: 'Rock Salt', cursive;
+    z-index: 1;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px #8d0b4c, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+  }

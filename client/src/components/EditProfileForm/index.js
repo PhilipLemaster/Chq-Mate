@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import GameDropdown from '../GameDropdown';
+import GameOptions from '../GameOptions';
 import EmailRO from '../EmailRO';
 import './style.css';
 import axios from 'axios';
@@ -28,15 +28,34 @@ class EditProfileForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state)
-    axios.post('/api', this.state)
-    .then(response => {
-      console.log(response)
-    })
-    .catch(error => {
-      console.log(error)
-    })
+
+    if(this.state.topgame === '') {
+      window.alert('Please confirm your top game choice!')
+    }
+
+    else {
+      axios.post('/api', this.state)
+      .then(response => {
+        console.log(response)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    }
   }
 
+  componentDidMount = () => {
+    this.setState({ 
+      email: document.getElementById('email').value,
+     });
+  }
+
+  confirmGame = () => {
+    this.setState({
+      topgame: document.getElementById('favGame').value
+    })
+    window.alert(`Top game updated!`)
+  }
   
 
   render() {
@@ -47,11 +66,11 @@ class EditProfileForm extends Component {
         <Form className='wholeForm' onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label for="gamertag">Gamertag</Label>
-            <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" onChange={this.onChange }/>
+            <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" onChange={this.onChange}/>
           </FormGroup>
           <FormGroup>
             <Label for="consoleSelect">Primary Console</Label>
-            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange }>
+            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange}>
               <option value="" disabled selected>Select Your Option</option>
               <option>Xbox One</option>
               <option>Playstation 4</option>
@@ -61,21 +80,22 @@ class EditProfileForm extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="styleSelect">Style</Label>
-            <Input type="select" name="style" id="styleSelect" onChange={this.onChange }>
+            <Input type="select" name="style" id="styleSelect" onChange={this.onChange}>
               <option value="" disabled selected>Select Your Option</option>
               <option>Casual</option>
               <option>Competitive</option>
               <option>Speedrunner</option>
             </Input>
           </FormGroup>
-          <GameDropdown />
+          <GameOptions />
           <FormGroup className="fGameGroup">
             <Label for="favGame">Top Game</Label>
             <Input type="text" name="topgame" id="favGame" readOnly/>
+            <Button className="confirmBut" onClick={this.confirmGame}>Confirm</Button>
           </FormGroup>
           <FormGroup className= 'uBGroup'>
             <Label for="userBio">User Bio</Label>
-            <Input type="textarea" name="bio" id="userBio" maxLength="100" onChange={this.onChange }/>
+            <Input type="textarea" name="bio" id="userBio" maxLength="100" onChange={this.onChange}/>
             <FormText color="muted">
             Max Length: 100 characters
             </FormText>

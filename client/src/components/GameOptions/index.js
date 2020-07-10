@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GameCard from '../GameCard';
 import debounce from 'lodash.debounce';
-import { InputGroupAddon, Input, Label } from 'reactstrap';
+import { InputGroupAddon, Input, Label, FormGroup } from 'reactstrap';
 import './style.css';
 
 class GameOptions extends Component {
@@ -53,22 +53,18 @@ class GameOptions extends Component {
                 });
         }
 
-
-            
-        
-
         handleSubmit(event) {
             event.preventDefault();
         }
 
     render() {
 
-        const gameCards = this.state.gameData.map(game => <GameCard game={game}/>)
+        const gameCards = this.state.gameData.map(game => <GameCard game={game} />)
             
         
 
         return(
-                <div>
+                <FormGroup>
                     <InputGroupAddon addonType="append">
                         <Label className="statusBut">{this.state.loading}</Label>
                     </InputGroupAddon>
@@ -76,7 +72,7 @@ class GameOptions extends Component {
                     <section className='gCardContainer'>
                         {gameCards}
                     </section>
-                </div>
+                </FormGroup>
         )
         
         

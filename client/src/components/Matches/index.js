@@ -14,6 +14,7 @@ class Matches extends Component {
 
       componentDidMount() {
           this.renderStrongCards();
+          this.clearState();
       }
       
       renderStrongCards = () => {
@@ -32,22 +33,11 @@ class Matches extends Component {
         });
       }
 
-      renderStrongCards = () => {
-        axios.get('/api', {
-            params: {
-              topgame: this.props.topgame,
-              console: this.props.console,
-              style: this.props.style,
-              _limit: 10
-            }
-          })
-          .then(response => {this.setState({ 
-                matchData : response.data
-            });
-            console.log(response.data)
+      clearState = () => {
+        this.setState({ 
+          matchData : []
         });
       }
-    
 
     render() {
 

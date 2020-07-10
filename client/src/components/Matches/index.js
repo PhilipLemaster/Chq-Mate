@@ -14,13 +14,9 @@ class Matches extends Component {
 
       componentDidMount() {
           this.renderStrongCards();
+          this.clearState();
       }
-
-      reLoad() {
-        this.props.reLoad();
-        this.renderStrongCards();
-      }
-
+      
       renderStrongCards = () => {
         axios.get('/api', {
             params: {
@@ -34,9 +30,14 @@ class Matches extends Component {
                 matchData : response.data
             });
             console.log(response.data)
-    });
+        });
       }
-    
+
+      clearState = () => {
+        this.setState({ 
+          matchData : []
+        });
+      }
 
     render() {
 

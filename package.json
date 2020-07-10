@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/PhilipLemaster/Chq-Mate.git"
   },
-  "author": "Philip Lemaster, Charles Price, Mark Fomin, Jonathan Modlin, Andrew Gonzalez",
+  "author": "Philip Lemaster, Andrew Gonzalez, Mark Fomin, Charles Price, Jonathan Modlin, ",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PhilipLemaster/Chq-Mate/issues"

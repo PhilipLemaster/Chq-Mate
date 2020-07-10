@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
       },
     bio: {
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
       },
     topgame: {
       type: DataTypes.STRING

@@ -18,7 +18,7 @@ const GameCard = (props) => {
           <CardImg src={props.game.image ? props.game.image.original : 'https://i.ibb.co/gyLmqhN/CMLogo-Text.png'} className='cardImg'/>
           <CardBody className='cardBody'>
             <CardTitle style= {{fontSize: '20px'}} className='gameTitle'>{props.game.name}</CardTitle>
-            <Button onClick={populateTitle} className='favGameBut'>Select<input style={{visibility:'hidden'}} value={props.game.name} className={props.game.name}></input></Button>
+            <Button onClick={populateTitle} className='favGameBut'>Select<input style={{visibility:'hidden'}} value={props.game.name} className={props.game.name} readOnly></input></Button>
           </CardBody>
         </Card>
   );

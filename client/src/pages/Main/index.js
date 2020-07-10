@@ -13,7 +13,12 @@ class Main extends Component {
         super(props)
     
         this.state = {
-            id: ''
+            id: '',
+            gamertag: '',
+            console: '',
+            bio: '',
+            topgame: '',
+            style: ''
         }
 
         this.reLoad = this.reLoad.bind(this);
@@ -35,9 +40,15 @@ class Main extends Component {
           .then((response) => {
             console.log(response);
             if (response.data[0]) {
-                const myId = response.data[0].id;
+                const data = response.data[0]
+                const myId = parseInt(data.id);
                 this.setState({ 
-                    id: myId
+                    id: myId,
+                    gamertag: data.gamertag,
+                    console: data.console,
+                    bio: data.bio,
+                    topgame: data.topgame,
+                    style: data.style
                 })
             }
           })
@@ -52,7 +63,7 @@ class Main extends Component {
         if(this.state.id !== '') {
             return(
                 <div>
-                    <SideNav />
+                    <SideNav reLoad={this.reLoad}/>
                     <div className="ct" id="t1">
                         <div className="ct" id="t2">
                             <div className="ct" id="t3">
@@ -74,7 +85,12 @@ class Main extends Component {
                                             </section>
                                         </div> 
                                         <div className="page" id="p5">
-                                            <EditProfileForm myId={this.state.id}/>
+                                            <EditProfileForm 
+                                            myId={this.state.id} 
+                                            gamertag={this.state.gamertag}
+                                            bio={this.state.bio}
+                                            topgame={this.state.topgame}
+                                            />
                                         </div> 
                                     </div>
                                 </div>

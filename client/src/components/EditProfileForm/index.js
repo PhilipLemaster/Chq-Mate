@@ -35,21 +35,38 @@ class EditProfileForm extends Component {
     }
 
     else {
-      axios.put('/api')
-        .then(res => {
-          this.setState({
-            cat: res
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-        })
+      axios.put(`/api/${this.props.myId}`, this.state,
+      {
+        params: {
+          id: this.props.myId
+        }
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch(err => {
+        console.log(err);
+      });
     }
   }
 
+  // updateUser = async () => {
+  //   try {
+  //     const response = await axios.put('/api', this.state,
+  //     {
+  //       params: {
+  //         id: this.props.myId
+  //       }
+  //     });
+  //     console.log(response);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  //   this.props.reLoad();
+  // }
+
   componentDidMount = () => {
     const email = document.getElementById('email').value
-
     this.setState({ 
       email: email,
      });
@@ -71,11 +88,11 @@ class EditProfileForm extends Component {
         <Form className='wholeForm' onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label for="gamertag">Gamertag</Label>
-            <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" onChange={this.onChange} required/>
+            <Input type="text" name="gamertag" id="gamertag" onChange={this.onChange} placeholder={this.props.gamertag} required/>
           </FormGroup>
           <FormGroup>
             <Label for="consoleSelect">Primary Console</Label>
-            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange} required>
+            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange} placeholder={this.props.console} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Xbox One</option>
               <option>Playstation 4</option>
@@ -85,7 +102,7 @@ class EditProfileForm extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="styleSelect">Style</Label>
-            <Input type="select" name="style" id="styleSelect" onChange={this.onChange} required>
+            <Input type="select" name="style" id="styleSelect" onChange={this.onChange} placeholder={this.props.style} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Casual</option>
               <option>Competitive</option>
@@ -95,12 +112,12 @@ class EditProfileForm extends Component {
           <GameOptions />
           <FormGroup className="fGameGroup">
             <Label for="favGame">Top Game</Label>
-            <Input type="text" name="topgame" id="favGame" readOnly/>
+            <Input type="text" name="topgame" id="favGame" placeholder={this.props.topgame} readOnly/>
             <Button className="confirmBut" onClick={this.confirmGame}>Confirm</Button>
           </FormGroup>
           <FormGroup className= 'uBGroup'>
             <Label for="userBio">User Bio</Label>
-            <Input type="textarea" name="bio" id="userBio" maxLength="100" onChange={this.onChange}/>
+            <Input type="textarea" name="bio" id="userBio" maxLength="100" onChange={this.onChange} placeholder={this.props.bio}/>
             <FormText color="muted">
             Max Length: 100 characters
             </FormText>

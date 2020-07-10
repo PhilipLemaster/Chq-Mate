@@ -8,7 +8,7 @@ exports.create = (req, res) => {
     email: req.body.email,
     password: req.body.password,   
     gamertag: req.body.gamertag,
-    platform: req.body.platform,
+    console: req.body.console,
     bio: req.body.bio,
     topgame: req.body.topgame,
     style: req.body.style
@@ -28,16 +28,16 @@ exports.findAll = (req, res) => {
  
 // Find a Profile by Id
 exports.findById = (req, res) => {  
-  Profile.findById(req.params.profileId).then(profile => {
+  Profile.findById(req.params.id).then(profile => {
     res.send(profile);
   })
 };
  
 // Update a Profile
 exports.update = (req, res) => {
-  const id = req.params.profileId;
-  Profile.update( { email: req.body.email, password: req.body.password, gamertag: req.body.gamertag, platform: req.body.platform, bio: req.body.bio, topgame: req.body.topgame }, 
-           { where: {id: req.params.profileId} }
+  const id = req.params.id;
+  Profile.update( { email: req.body.email, password: req.body.password, gamertag: req.body.gamertag, console: req.body.console, bio: req.body.bio, topgame: req.body.topgame }, 
+           { where: {id: req.params.id} }
            ).then(() => {
            res.status(200).send("updated successfully a profile with id = " + id);
            });
@@ -45,7 +45,7 @@ exports.update = (req, res) => {
  
 // Delete a Profile by Id
 exports.delete = (req, res) => {
-  const id = req.params.profileId;
+  const id = req.params.id;
   Profile.destroy({
     where: { id: id }
   }).then(() => {

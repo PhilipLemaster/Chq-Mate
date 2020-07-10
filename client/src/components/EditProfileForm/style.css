@@ -4,6 +4,7 @@
     bottom: 40px;
 }
 
+
 label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
     color: black;
     font-size: 15px;
@@ -13,19 +14,13 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
 
 .uBGroup {
   position: relative;
-  bottom: 680px;
+  bottom: 730px;
   left: 440px;
 }
 
 .submitBut {
   position: relative;
   bottom: 290px;
-}
-
-.emailGroup {
-  position: relative;
-  bottom: 910px;
-  left: 441px;
 }
 
 .fGameGroup {
@@ -39,13 +34,17 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
   color: #38b0e7;
 }
 
-.submitBut {
+.submitBut, .confirmBut {
   background-color: rgb(27, 27, 27);
   transition: background-color 0.6s;
 }
 
-.submitBut:hover {
+.submitBut:hover, .confirmBut:hover {
   background-color: rgba(189, 117, 183, 0.678);
+}
+
+.confirmBut {
+  margin: 6px;
 }
 
 .ePHeading {

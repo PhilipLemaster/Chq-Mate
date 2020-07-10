@@ -1,5 +1,5 @@
 .matchCard {
-    height: 500px;
+    height: 480px;
     width: 300px;
     margin: 20px;
     padding-block-start: 40px;
@@ -21,12 +21,12 @@
 }
 
 .typeIcon {
-    bottom: 27px;
+    top: 10px;
     right: 6px;
 }
 
 .consoleIcon {
-    bottom: 15px;
+    top: 15px;
     right: 6px;
 }
 
@@ -77,4 +77,32 @@
 
 .cardBut:hover {
     background-color: teal;
+}
+
+[id='Nintendo Switch'] {
+    content:url('../../assets/icons/switch.png');
+}
+
+[id='Xbox One'] {
+    content:url('../../assets/icons/xbox.png');
+}
+
+[id='Playstation 4'] {
+    content:url('../../assets/icons/playstation.png');
+}
+
+[id='PC'] {
+    content:url('../../assets/icons/pc.png');
+}
+
+[id='Competitive'] {
+    content:url('../../assets/icons/competitive.png');
+}
+
+[id='Casual'] {
+    content:url('../../assets/icons/casual.png');
+}
+
+[id='Speedrunner'] {
+    content:url('../../assets/icons/speedrun.png');
 }

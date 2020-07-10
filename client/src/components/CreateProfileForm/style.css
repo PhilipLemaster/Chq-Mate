@@ -1,0 +1,72 @@
+.wholeCreateForm {
+    margin-inline-start: 270px;
+    max-width: 600px;
+}
+
+#consoleSelectC, #userBioC, #styleSelectC {
+    color: black;
+    font-size: 15px;
+    font-family: 'MuseoModerno', cursive;
+    width: 390px;
+}
+
+.cLabels {
+  color: #f8eef0;
+}
+
+#gamertagC, #gameSearch {
+  color: #e7384f;
+}
+
+.uBGroupC {
+  position: relative;
+  bottom: 720px;
+  left: 440px;
+}
+
+.fGameGroupC {
+  position: relative;
+  bottom: 590px;
+  left: 870px;
+}
+
+#favGame, #email {
+  font-size: 26px;
+  color: #38b0e7;
+}
+
+.submitButC {
+  position: relative;
+  bottom: 350px;
+  background-color: rgb(27, 27, 27);
+  transition: background-color 0.6s;
+  font-family: 'MuseoModerno', cursive;
+  height: 30px;
+}
+
+.submitButC:hover {
+  background-color: rgba(189, 117, 183, 0.678);
+}
+
+.ePHeadingC {
+    position: relative;
+    left: 1130px;
+    top: 170px;
+    transform: rotate(10deg);
+    font-size: 60px;
+    color: rgb(98, 84, 226);
+    -webkit-animation: glow2 2s ease-in-out infinite alternate;
+    -moz-animation: glow2 2s ease-in-out infinite alternate;
+    animation: glow2 2s ease-in-out infinite alternate;
+    font-family: 'Rock Salt', cursive;
+    z-index: 1;
+}
+
+@keyframes glow2 {
+  from {
+    text-shadow: 0 0 10px rgb(157, 155, 245), 0 0 20px #fff, 0 0 30px #2a00e6, 0 0 40px #2a00e6, 0 0 50px #2a00e6, 0 0 60px #2a00e6, 0 0 70px #2a00e6;
+  }
+  to {
+    text-shadow: 0 0 20px rgb(157, 155, 245), 0 0 30px #140b8d, 0 0 40px #4d50ff, 0 0 50px #4d50ff, 0 0 60px #4d50ff, 0 0 70px #4d50ff, 0 0 80px #4d50ff;
+  }
+  }

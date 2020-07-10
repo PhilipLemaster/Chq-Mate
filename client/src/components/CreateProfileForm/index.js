@@ -5,7 +5,7 @@ import EmailRO from '../EmailRO';
 import './style.css';
 import axios from 'axios';
 
-class EditProfileForm extends Component {
+class CreateProfileForm extends Component {
   constructor(props) {
     super(props)
 
@@ -17,7 +17,6 @@ class EditProfileForm extends Component {
        topgame: '',
        style: ''
     }
-
   }
 
   onChange = (e) => {
@@ -28,32 +27,29 @@ class EditProfileForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state)
-
+    
     if(this.state.topgame === '') {
       window.alert('Please confirm your top game choice!')
     }
 
     else {
-      axios.put(`/api/${this.props.myId}`, this.state,
-      {
-        params: {
-          id: this.props.myId
-        }
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+      this.createUser();
     }
   }
 
+  createUser = async () => {
+    try {
+      const response = await axios.post('/api', this.state);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+    this.props.reLoad();
+  }
+
   componentDidMount = () => {
-    const email = document.getElementById('email').value
     this.setState({ 
-      email: email,
+      email: document.getElementById('email').value,
      });
   }
 
@@ -69,15 +65,15 @@ class EditProfileForm extends Component {
 
     return (
       <div>
-        <h1 className='ePHeading'>EDIT PROFILE</h1>
-        <Form className='wholeForm' onSubmit={this.handleSubmit}>
+        <h1 className='ePHeadingC'>CREATE PROFILE</h1>
+        <Form className='wholeCreateForm' onSubmit={this.handleSubmit}>
           <FormGroup>
-            <Label for="gamertag">Gamertag</Label>
-            <Input type="text" name="gamertag" id="gamertag" onChange={this.onChange} placeholder={this.props.gamertag} required/>
+            <Label for="gamertag" className="cLabels">Gamertag</Label>
+            <Input type="text" name="gamertag" id="gamertagC" placeholder="CaptainTeal" onChange={this.onChange} required/>
           </FormGroup>
           <FormGroup>
-            <Label for="consoleSelect">Primary Console</Label>
-            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange} placeholder={this.props.console} required>
+            <Label for="consoleSelect" className="cLabels">Primary Console</Label>
+            <Input type="select" name="console" id="consoleSelectC" onChange={this.onChange} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Xbox One</option>
               <option>Playstation 4</option>
@@ -86,33 +82,33 @@ class EditProfileForm extends Component {
             </Input>
           </FormGroup>
           <FormGroup>
-            <Label for="styleSelect">Style</Label>
-            <Input type="select" name="style" id="styleSelect" onChange={this.onChange} placeholder={this.props.style} required>
+            <Label for="styleSelect" className="cLabels">Style</Label>
+            <Input type="select" name="style" id="styleSelectC" onChange={this.onChange} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Casual</option>
               <option>Competitive</option>
               <option>Speedrunner</option>
             </Input>
           </FormGroup>
-          <GameOptions />
-          <FormGroup className="fGameGroup">
-            <Label for="favGame">Top Game</Label>
-            <Input type="text" name="topgame" id="favGame" placeholder={this.props.topgame} readOnly/>
+          <GameOptions class="cLabels"/>
+          <FormGroup className="fGameGroupC">
+            <Label for="favGame" className="cLabels">Top Game</Label>
+            <Input type="text" name="topgame" id="favGame" readOnly required/>
             <Button className="confirmBut" onClick={this.confirmGame}>Confirm</Button>
           </FormGroup>
-          <FormGroup className= 'uBGroup'>
-            <Label for="userBio">User Bio</Label>
-            <Input type="textarea" name="bio" id="userBio" maxLength="100" onChange={this.onChange} placeholder={this.props.bio}/>
+          <FormGroup className= 'uBGroupC'>
+            <Label for="userBio" className="cLabels">User Bio</Label>
+            <Input type="textarea" name="bio" id="userBioC" maxLength="100" onChange={this.onChange}/>
             <FormText color="muted">
             Max Length: 100 characters
             </FormText>
           </FormGroup>
-          <EmailRO />
-          <Button className="submitBut">Submit</Button>
+          <EmailRO class="cLabels"/>
+          <Button className="submitButC">Get Started!</Button>
         </Form>
       </div>
     );
   }
 }
 
-export default EditProfileForm;
+export default CreateProfileForm;

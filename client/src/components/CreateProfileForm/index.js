@@ -27,8 +27,7 @@ class CreateProfileForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state)
-
+    
     if(this.state.topgame === '') {
       window.alert('Please confirm your top game choice!')
     }
@@ -101,7 +100,7 @@ class CreateProfileForm extends Component {
             </FormText>
           </FormGroup>
           <EmailRO class="cLabels"/>
-          <Button className="submitButC">Submit</Button>
+          <Button className="submitButC">Get Started!</Button>
         </Form>
       </div>
     );

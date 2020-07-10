@@ -19,12 +19,6 @@ function App() {
       <Main />
     )
   }
-
-  // else {
-  //   return(
-
-  //   )
-  // }
 }
 
 export default App;

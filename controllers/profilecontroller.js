@@ -8,7 +8,7 @@ exports.create = (req, res) => {
     email: req.body.email,
     password: req.body.password,   
     gamertag: req.body.gamertag,
-    platform: req.body.platform,
+    console: req.body.console,
     bio: req.body.bio,
     topgame: req.body.topgame,
     style: req.body.style
@@ -36,7 +36,7 @@ exports.findById = (req, res) => {
 // Update a Profile
 exports.update = (req, res) => {
   const id = req.params.profileId;
-  Profile.update( { email: req.body.email, password: req.body.password, gamertag: req.body.gamertag, platform: req.body.platform, bio: req.body.bio, topgame: req.body.topgame }, 
+  Profile.update( { email: req.body.email, password: req.body.password, gamertag: req.body.gamertag, console: req.body.console, bio: req.body.bio, topgame: req.body.topgame }, 
            { where: {id: req.params.profileId} }
            ).then(() => {
            res.status(200).send("updated successfully a profile with id = " + id);

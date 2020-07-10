@@ -17,6 +17,7 @@ class EditProfileForm extends Component {
        topgame: '',
        style: ''
     }
+
   }
 
   onChange = (e) => {
@@ -34,19 +35,23 @@ class EditProfileForm extends Component {
     }
 
     else {
-      axios.post('/api', this.state)
-      .then(response => {
-        console.log(response)
-      })
-      .catch(error => {
-        console.log(error)
-      })
+      axios.put('/api')
+        .then(res => {
+          this.setState({
+            cat: res
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        })
     }
   }
 
   componentDidMount = () => {
+    const email = document.getElementById('email').value
+
     this.setState({ 
-      email: document.getElementById('email').value,
+      email: email,
      });
   }
 
@@ -66,11 +71,11 @@ class EditProfileForm extends Component {
         <Form className='wholeForm' onSubmit={this.handleSubmit}>
           <FormGroup>
             <Label for="gamertag">Gamertag</Label>
-            <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" onChange={this.onChange}/>
+            <Input type="text" name="gamertag" id="gamertag" placeholder="CaptainTeal" onChange={this.onChange} required/>
           </FormGroup>
           <FormGroup>
             <Label for="consoleSelect">Primary Console</Label>
-            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange}>
+            <Input type="select" name="console" id="consoleSelect" onChange={this.onChange} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Xbox One</option>
               <option>Playstation 4</option>
@@ -80,7 +85,7 @@ class EditProfileForm extends Component {
           </FormGroup>
           <FormGroup>
             <Label for="styleSelect">Style</Label>
-            <Input type="select" name="style" id="styleSelect" onChange={this.onChange}>
+            <Input type="select" name="style" id="styleSelect" onChange={this.onChange} required>
               <option value="" disabled selected>Select Your Option</option>
               <option>Casual</option>
               <option>Competitive</option>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component }from 'react';
 import SideNav from '../../components/SideNav';
 import EditProfileForm from '../../components/EditProfileForm';
 import LogoutButton from '../../components/LogoutButton';
@@ -6,56 +6,87 @@ import MatchCard from '../../components/MatchCard';
 import MainGreeting from '../../components/MainGreeting';
 import CreateProfileForm from '../../components/CreateProfileForm';
 import './main.css';
-import { useAuth0 } from '@auth0/auth0-react';
+import axios from 'axios';
 
-function Main() {
+class Main extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            id: ''
+        }
+      }
+    
 
-    const { user } = useAuth0();
+      componentDidMount() {
+          this.getInfo();
+      }
 
-    if (user.logins_count === 1) {
-        return(
-            <CreateProfileForm />
-        )
-    }
+      getInfo() {
+        const email = document.getElementById('email').value
 
-    else {
-        return(
-            <div>
-                <SideNav />
-                <div className="ct" id="t1">
-                    <div className="ct" id="t2">
-                        <div className="ct" id="t3">
-                            <div className="ct" id="t4">
-                                <div className="ct" id="t5">
-                                    <div className="page" id="p2">
-                                        <h1>Profile Matches</h1>
-                                        <MatchCard />
-                                    </div>  
-                                    <div className="page" id="p3">
-                                        <section className="icon fa fa-rocket"><span className="title">Rocket</span></section>
+        axios.get('/api', {
+            params: {
+              email: email
+            }
+          })
+          .then(function(response) {
+            console.log(response);
+            if (response.data[0]) {
+                const myId = response.data[0].id;
+                this.setState({ 
+                    id: myId
+                })
+            }
+          })
+        }
+
+    render() {
+        if(this.state.id) {
+            return(
+                <div>
+                    <SideNav />
+                    <div className="ct" id="t1">
+                        <div className="ct" id="t2">
+                            <div className="ct" id="t3">
+                                <div className="ct" id="t4">
+                                    <div className="ct" id="t5">
+                                        <div className="page" id="p2">
+                                            <h1>Profile Matches</h1>
+                                            <MatchCard myId={this.state.id}/>
+                                        </div>  
+                                        <div className="page" id="p3">
+                                            <CreateProfileForm />
+                                        </div>
+                                        <div className="page" id="p4">
+                                            <section className="icon fas fa-search">
+                                            <span className="title">Match</span>
+                                            <p className="hint">
+                                                <span>Hello</span> 
+                                            </p>
+                                            </section>
+                                        </div> 
+                                        <div className="page" id="p5">
+                                            <EditProfileForm myId={this.state.id}/>
+                                        </div> 
                                     </div>
-                                    <div className="page" id="p4">
-                                        <section className="icon fas fa-search">
-                                        <span className="title">Match</span>
-                                        <p className="hint">
-                                            <span>Hello</span> 
-                                        </p>
-                                        </section>
-                                    </div> 
-                                    <div className="page" id="p5">
-                                        <EditProfileForm />
-                                    </div> 
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <LogoutButton />
-                <MainGreeting />
-            </div>
-        )
+                    <LogoutButton />
+                    <MainGreeting />
+                </div> 
+            )
+        }
+
+        else {
+            return(
+                <CreateProfileForm />
+            )
+        }
+        
     }
-    
 }
 
 export default Main;

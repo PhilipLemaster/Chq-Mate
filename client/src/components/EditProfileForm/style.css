@@ -22,12 +22,6 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
   bottom: 290px;
 }
 
-.emailGroup {
-  position: relative;
-  bottom: 910px;
-  left: 441px;
-}
-
 .fGameGroup {
   position: relative;
   bottom: 590px;

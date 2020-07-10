@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import './style.css';
 import GameDropdown from '../GameDropdown';
+import EmailRO from '../EmailRO';
+import './style.css';
 import axios from 'axios';
-import { useAuth0 } from "@auth0/auth0-react";
 
 class EditProfileForm extends Component {
   constructor(props) {
@@ -80,10 +80,7 @@ class EditProfileForm extends Component {
             Max Length: 100 characters
             </FormText>
           </FormGroup>
-          <FormGroup className="emailGroup">
-            <Label for="emailGroup">Email</Label>
-            <Input type="email" name="email" id="email" readOnly value="hello@gmail.com" />
-          </FormGroup>
+          <EmailRO />
           <Button className="submitBut">Submit</Button>
         </Form>
       </div>

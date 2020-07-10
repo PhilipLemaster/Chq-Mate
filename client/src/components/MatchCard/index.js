@@ -2,18 +2,12 @@ import React from 'react';
 import { Card, Button, CardImg } from 'reactstrap';
 import { useAuth0 } from "@auth0/auth0-react";
 import './style.css';
-import Competitive from '../../assets/icons/competitive.png';
-import Casual from '../../assets/icons/casual.png';
-import Speedrunner from '../../assets/icons/speedrun.png';
-import pcIcon from '../../assets/icons/pc.png';
 
 const MatchCard = (props) => {
 
     const { user } = useAuth0();
     
-    if(props.match.style === "Competitive") {
-        const styleIcon = {Competitive}
-    }
+    
 
     return(
         <Card body inverse style={{ backgroundColor: '#232136' }} className="matchCard">

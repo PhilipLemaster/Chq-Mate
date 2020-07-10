@@ -16,6 +16,11 @@ class Matches extends Component {
           this.renderStrongCards();
       }
 
+      reLoad() {
+        this.props.reLoad();
+        this.renderStrongCards();
+      }
+
       renderStrongCards = () => {
         axios.get('/api', {
             params: {
@@ -35,11 +40,11 @@ class Matches extends Component {
 
     render() {
 
-        const matchCards = this.state.matchData.map(match => <MatchCard match={match} />)
+        const matchCardsStrong = this.state.matchData.map(match => <MatchCard match={match} />)
 
         return(
             <div>
-                {matchCards}
+                {matchCardsStrong}
             </div>
         )
     }

@@ -73,7 +73,8 @@ class Main extends Component {
                                             <Matches 
                                             console={this.state.console} 
                                             topgame={this.state.topgame} 
-                                            style={this.state.style}/>
+                                            style={this.state.style}
+                                            reLoad={this.reLoad}/>
                                         </div>  
                                         <div className="page" id="p3">
                                             <h1>Filler</h1>

@@ -48,6 +48,10 @@ class Main extends Component {
           })
         }
 
+        componentDidMount = () => {
+            this.clearInfo();
+        }
+
         clearInfo = () => {
             this.setState({ 
                 id: '',

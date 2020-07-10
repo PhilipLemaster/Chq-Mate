@@ -1,28 +1,30 @@
-.wholeForm {
-    margin: 25px;
-    position: relative;
-    bottom: 40px;
+.wholeCreateForm {
+    margin-inline-start: 270px;
+    max-width: 600px;
 }
 
-label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
+#consoleSelectC, #userBioC, #styleSelectC {
     color: black;
     font-size: 15px;
     font-family: 'MuseoModerno', cursive;
     width: 390px;
 }
 
-.uBGroup {
+.cLabels {
+  color: #f8eef0;
+}
+
+#gamertagC, #gameSearch {
+  color: #e7384f;
+}
+
+.uBGroupC {
   position: relative;
-  bottom: 680px;
+  bottom: 720px;
   left: 440px;
 }
 
-.submitBut {
-  position: relative;
-  bottom: 290px;
-}
-
-.fGameGroup {
+.fGameGroupC {
   position: relative;
   bottom: 590px;
   left: 870px;
@@ -33,7 +35,9 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
   color: #38b0e7;
 }
 
-.submitBut {
+.submitButC {
+  position: relative;
+  bottom: 290px;
   background-color: rgb(27, 27, 27);
   transition: background-color 0.6s;
 }
@@ -42,13 +46,13 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
   background-color: rgba(189, 117, 183, 0.678);
 }
 
-.ePHeading {
+.ePHeadingC {
     position: relative;
     left: 1130px;
-    top: 185px;
+    top: 170px;
     transform: rotate(10deg);
     font-size: 60px;
-    color: rgb(226, 84, 127);
+    color: rgb(98, 84, 226);
     -webkit-animation: glow 2s ease-in-out infinite alternate;
     -moz-animation: glow 2s ease-in-out infinite alternate;
     animation: glow 2s ease-in-out infinite alternate;
@@ -58,9 +62,9 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px rgb(157, 155, 245), 0 0 20px #fff, 0 0 30px #2a00e6, 0 0 40px #2a00e6, 0 0 50px #2a00e6, 0 0 60px #2a00e6, 0 0 70px #2a00e6;
   }
   to {
-    text-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px #8d0b4c, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px rgb(157, 155, 245), 0 0 30px #140b8d, 0 0 40px #4d50ff, 0 0 50px #4d50ff, 0 0 60px #4d50ff, 0 0 70px #4d50ff, 0 0 80px #4d50ff;
   }
   }

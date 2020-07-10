@@ -7,8 +7,8 @@ import './style.css';
 class GameOptions extends Component {
 
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             gameTitle: '',
             gameData: [],
@@ -66,7 +66,7 @@ class GameOptions extends Component {
         return(
                 <FormGroup>
                     <InputGroupAddon addonType="append">
-                        <Label className="statusBut">{this.state.loading}</Label>
+                        <Label className={`statusBut ${this.props.class}`}>{this.state.loading}</Label>
                     </InputGroupAddon>
                     <Input type="text" placeholder="Type Here" onChange={this.handleChange} id="gameSearch"/>
                     <section className='gCardContainer'>

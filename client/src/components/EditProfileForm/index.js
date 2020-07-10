@@ -53,7 +53,7 @@ class EditProfileForm extends Component {
   componentDidMount = () => {
     const email = document.getElementById('email').value
     this.setState({ 
-      email: email,
+      email: email
      });
   }
 

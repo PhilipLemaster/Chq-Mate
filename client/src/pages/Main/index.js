@@ -23,11 +23,6 @@ class Main extends Component {
 
         this.reLoad = this.reLoad.bind(this);
       }
-    
-
-      componentDidMount = () => {
-          this.getInfo();
-      }
 
       getInfo = () => {
         const email = document.getElementById('email').value
@@ -53,9 +48,21 @@ class Main extends Component {
           })
         }
 
+        clearInfo = () => {
+            this.setState({ 
+                id: '',
+                gamertag: '',
+                console: '',
+                bio: '',
+                topgame: '',
+                style: ''
+            })
+        }
+
         reLoad = () => {
             this.getInfo();
             this.forceUpdate();
+            this.clearInfo();
           }
 
     render() {

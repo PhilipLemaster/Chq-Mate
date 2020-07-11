@@ -48,10 +48,6 @@ class Main extends Component {
           })
         }
 
-        componentDidMount = () => {
-            this.clearInfo();
-        }
-
         clearInfo = () => {
             this.setState({ 
                 id: '',
@@ -69,8 +65,13 @@ class Main extends Component {
             this.clearInfo();
           }
 
+        componentDidMount = () => {
+            this.getInfo();
+        }
+        
     render() {
-        if(this.state.id !== '') {
+        
+        if(this.props.isUser === 'true') {
             return(
                 <div>
                     <SideNav reLoad={this.reLoad}/>
@@ -80,7 +81,6 @@ class Main extends Component {
                                 <div className="ct" id="t4">
                                     <div className="ct" id="t5">
                                         <div className="page" id="p2">
-                                            <h1>Profile Matches</h1>
                                             <Matches 
                                             console={this.state.console} 
                                             topgame={this.state.topgame} 
@@ -117,7 +117,7 @@ class Main extends Component {
             )
         }
 
-        else {
+        else if (this.props.isUser === 'false') {
             return(
                 <CreateProfileForm reLoad={this.reLoad}/>
             )

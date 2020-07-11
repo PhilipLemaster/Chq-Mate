@@ -4,6 +4,10 @@
     bottom: 40px;
 }
 
+.form-group {
+  max-width: 400px;
+  margin: 10px;
+}
 
 label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
     color: black;
@@ -27,6 +31,11 @@ label, input, #consoleSelect, #gamertag, #userBio, #styleSelect {
   position: relative;
   bottom: 590px;
   left: 870px;
+  width: 500px;
+}
+
+#favGame {
+  width: 748px;
 }
 
 #favGame, #email {

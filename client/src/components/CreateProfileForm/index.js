@@ -34,6 +34,7 @@ class CreateProfileForm extends Component {
 
     else {
       this.createUser();
+      window.location.reload(false)
     }
   }
 

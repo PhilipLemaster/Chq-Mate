@@ -97,6 +97,15 @@ font-family: 'Chakra Petch', sans-serif;
 height: auto; padding: 15px; 
 }
 
+.chatFiller, .topGames {
+  position: relative;
+  left: 500px;
+  top: 350px;
+  font-family: 'MuseoModerno', cursive;
+  font-size: 80px;
+  max-width: 600px;
+}
+
 #logo{
   position: relative;
   background-position: center; 

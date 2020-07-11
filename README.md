@@ -1,4 +1,4 @@
-![badge image](https://img.shields.io/badge/Chq-Mate-Social%20Media%20App-orange?style=plastic "Project Badge") [![Heroku App Status](http://heroku-shields.herokuapp.com/Chq-Mate)](https://Chq-Mate.herokuapp.com) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/PhilipLemaster/Chq-Mate?style=plastic)
+![badge image](https://img.shields.io/badge/chq%20mate-social%20media-critical?style=plastic "Project Badge") [![Heroku App Status](http://heroku-shields.herokuapp.com/Chq-Mate)](https://Chq-Mate.herokuapp.com) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/PhilipLemaster/Chq-Mate?style=plastic)
 # Chq Mate 
 ***
 ![Image](Screenshot.png)

@@ -6,6 +6,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 function App() {
   const {
     isAuthenticated,
+    user
   } = useAuth0();
 
   if (!isAuthenticated) {
@@ -15,9 +16,17 @@ function App() {
   }
 
   else if (isAuthenticated) {
-    return(
-      <Main />
-    )
+    if (localStorage.getItem(user.email) === 'isUser') {
+      return(
+        <Main isUser='true'/>
+      )
+    }
+    else {
+      localStorage.setItem(user.email, 'isUser')
+      return(
+        <Main isUser='false'/>
+      )
+    }
   }
 }
 

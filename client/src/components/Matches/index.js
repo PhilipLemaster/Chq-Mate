@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 import axios from 'axios';
 import MatchCard from '../MatchCard';
 import './style.css';
@@ -44,9 +45,14 @@ class Matches extends Component {
         const matchCardsStrong = this.state.matchData.map(match => <MatchCard match={match} />)
 
         return(
-            <div>
+          <div>
+            <h1 className="matchHead">My Matches</h1>
+            <Button onClick={() => window.location.reload(false)} className="refreshBut"></Button>
+              <div className="matchCardContainer">
                 {matchCardsStrong}
             </div>
+          </div>
+            
         )
     }
 }

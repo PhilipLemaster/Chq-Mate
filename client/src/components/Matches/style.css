@@ -1,0 +1,22 @@
+.matchHead {
+    position: relative;
+    left: 50px;
+    font-size: 60px;
+    font-family: 'Audiowide', cursive;
+    text-shadow: rgb(21, 32, 97) 2px 2px;
+}
+
+.refreshBut {
+    background: url("../../assets/icons/refresh.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:rgb(21, 19, 26);
+    transition: background-color 0.4s;
+    position: relative;
+    left: 480px;
+    bottom: 60px;
+}
+
+.refreshBut:hover {
+    background-color: rgb(175, 175, 175);
+}

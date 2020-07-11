@@ -31,7 +31,6 @@
     "cors": "^2.8.5",
     "if-env": "^1.0.4",
     "lodash.debounce": "^4.0.8",
-    "materialize-css": "^1.0.0-rc.2",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.4",

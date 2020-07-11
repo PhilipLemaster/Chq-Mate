@@ -88,15 +88,10 @@ class Main extends Component {
                                             reLoad={this.reLoad}/>
                                         </div>  
                                         <div className="page" id="p3">
-                                            <h1>Filler</h1>
+                                            <h1 className="chatFiller">Chat/Messaging Feature Coming Soon!</h1>
                                         </div>
                                         <div className="page" id="p4">
-                                            <section className="icon fas fa-search">
-                                            <span className="title">Match</span>
-                                            <p className="hint">
-                                                <span>Hello</span> 
-                                            </p>
-                                            </section>
+                                            <h1 className="topGames">Most Popular Games</h1>
                                         </div> 
                                         <div className="page" id="p5">
                                             <EditProfileForm 

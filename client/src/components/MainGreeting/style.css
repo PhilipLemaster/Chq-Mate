@@ -3,4 +3,15 @@
     color: white;
     font-family: 'MuseoModerno', cursive;
     font-weight: 200;
+    margin: 0;
+    font-size: 60px;
+}
+
+.mainInfo {
+    text-align: center;
+    color: white;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 200;
+    margin: 0;
+    font-size: 30px;
 }

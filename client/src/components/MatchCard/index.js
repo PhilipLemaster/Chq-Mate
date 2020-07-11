@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Button, CardImg } from 'reactstrap';
-import defImg from '../../assets/images/profile.png';
 import './style.css';
 
 const MatchCard = (props) => {
